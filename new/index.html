@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMJV – Shri Mahavira Jaina Vidyalaya | Hostels & Reviews Since 1915</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ====== GLOBAL STYLES ====== */
+        :root {
+            --saffron: #E8723A;
+            --saffron-deep: #C8551E;
+            --saffron-glow: #F4945C;
+            --gold: #C9A44B;
+            --gold-light: #E0C87A;
+            --gold-pale: #F5ECD7;
+            --cream: #FDF9F2;
+            --ivory: #F7F1E4;
+            --warm-bg: #FFFEFA;
+            --brown-deep: #1F1006;
+            --brown: #3D1C02;
+            --brown-med: #5C3010;
+            --text-primary: #1A0D04;
+            --text-secondary: #5C3D2A;
+            --text-muted: #8B6F58;
+            --border-subtle: #E8DDD0;
+            --border-light: #F0E8DB;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(30, 10, 2, 0.04);
+            --shadow-md: 0 4px 16px rgba(30, 10, 2, 0.06);
+            --shadow-lg: 0 12px 40px rgba(30, 10, 2, 0.10);
+            --shadow-xl: 0 20px 60px rgba(30, 10, 2, 0.14);
+            --shadow-glow-saffron: 0 0 40px rgba(232, 114, 58, 0.25);
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 22px;
+            --radius-xl: 28px;
+            --radius-full: 9999px;
+            --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--warm-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section--alt {
+            background: var(--ivory);
+        }
+
+        .section--sm {
+            padding: 56px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--saffron-deep);
+            margin-bottom: 10px;
+            background: rgba(232, 114, 58, 0.07);
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+        }
+
+        .section-eyebrow::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--saffron);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--brown-deep);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 12px 26px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.84rem;
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn--primary {
+            background: var(--saffron);
+            color: #fff;
+        }
+
+        .btn--primary:hover {
+            background: var(--saffron-deep);
+            transform: translateY(-2px);
+        }
+
+        .btn--gold {
+            background: var(--gold);
+            color: #fff;
+        }
+
+        .btn--gold:hover {
+            background: #b8923d;
+            transform: translateY(-2px);
+        }
+
+        .btn--outline {
+            background: transparent;
+            color: var(--saffron-deep);
+            border: 2px solid var(--saffron-deep);
+        }
+
+        .btn--outline:hover {
+            background: var(--saffron-deep);
+            color: #fff;
+        }
+
+        .btn--white {
+            background: #fff;
+            color: var(--brown-deep);
+        }
+
+        .btn--white:hover {
+            background: #fafafa;
+            transform: translateY(-2px);
+        }
+
+        .btn--sm {
+            padding: 9px 18px;
+            font-size: 0.78rem;
+        }
+
+        .btn--lg {
+            padding: 15px 32px;
+            font-size: 0.9rem;
+        }
+
+        /* Topbar */
+        .topbar {
+            background: var(--brown-deep);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.7rem;
+            padding: 7px 0;
+        }
+
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topbar a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 254, 250, 0.92);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            border-bottom-color: var(--border-subtle);
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--saffron-deep), var(--saffron));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .logo-text strong {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            color: var(--brown-deep);
+        }
+
+        .logo-text span {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            padding: 8px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: var(--saffron-deep);
+            background: rgba(232, 114, 58, 0.06);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 22px;
+            height: 2.5px;
+            background: var(--brown-deep);
+            border-radius: 3px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            top: 64px;
+            background: rgba(255, 254, 250, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 900;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            padding: 14px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 0.92rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1F1006 0%, #2A1608 100%);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--gold-light);
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-badge .badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--saffron-glow);
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+            line-height: 1.08;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--saffron-glow), var(--gold-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 0.94rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 28px;
+            max-width: 460px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .hero-stats-row {
+            display: flex;
+            gap: 28px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-stat-val {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            display: block;
+            line-height: 1;
+        }
+
+        .hero-stat-lbl {
+            font-size: 0.68rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+        }
+
+        .hero-card-main {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            backdrop-filter: blur(12px);
+            margin-bottom: 16px;
+        }
+
+        .hero-card-main h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .hero-card-main p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .hero-mini-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            padding: 18px 16px;
+            text-align: center;
+        }
+
+        .hero-mini-card .mini-val {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            display: block;
+        }
+
+        .hero-mini-card .mini-lbl {
+            font-size: 0.67rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Ticker */
+        .ticker-wrap {
+            background: var(--saffron-deep);
+            overflow: hidden;
+            padding: 11px 0;
+        }
+
+        .ticker-track {
+            display: flex;
+            gap: 40px;
+            white-space: nowrap;
+            animation: tickerScroll 22s linear infinite;
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        @keyframes tickerScroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* Stats Banner */
+        .stats-banner {
+            background: #fff;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat-cell {
+            padding: 28px 20px;
+            text-align: center;
+            border-right: 1px solid var(--border-light);
+        }
+
+        .stat-cell:last-child {
+            border-right: none;
+        }
+
+        .stat-cell .stat-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--saffron-deep);
+            display: block;
+        }
+
+        .stat-cell .stat-desc {
+            font-size: 0.73rem;
+            color: var(--text-muted);
+        }
+
+        /* About Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+            height: 380px;
+        }
+
+        .about-img-large {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 68%;
+            height: 290px;
+            background: linear-gradient(135deg, #F7F1E4, #EDE0CC);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .about-img-accent {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 52%;
+            height: 200px;
+            background: linear-gradient(150deg, var(--saffron-deep), var(--saffron));
+            border-radius: var(--radius-lg);
+        }
+
+        .about-badge-floating {
+            position: absolute;
+            left: 40%;
+            top: 42%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border-radius: var(--radius-md);
+            padding: 18px 22px;
+            box-shadow: var(--shadow-xl);
+            text-align: center;
+        }
+
+        .about-badge-floating .yr {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--saffron-deep);
+        }
+
+        .mission-quote {
+            background: var(--brown-deep);
+            border-radius: var(--radius-md);
+            padding: 22px 24px;
+            margin-top: 18px;
+        }
+
+        .mission-quote p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .mission-quote cite {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.7rem;
+            color: var(--gold-light);
+        }
+
+        /* Hostel Cards */
+        .hostel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 22px;
+            margin-top: 32px;
+        }
+
+        .hostel-card {
+            background: #fff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-smooth);
+        }
+
+        .hostel-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .hostel-card-top {
+            height: 130px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 18px;
+        }
+
+        .hostel-card-top .hostel-city {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hostel-card-top .hostel-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.64rem;
+            font-weight: 600;
+            backdrop-filter: blur(6px);
+        }
+
+        .hostel-card-body {
+            padding: 20px;
+        }
+
+        .hostel-stars {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #E8A838;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+
+        .hostel-stars .rating-num {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .hostel-meta {
+            display: flex;
+            gap: 14px;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin: 12px 0;
+        }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .review-card {
+            background: #fff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .review-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--saffron), var(--saffron-deep));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .review-stars {
+            color: #E8A838;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .review-tag {
+            display: inline-block;
+            background: var(--gold-pale);
+            color: var(--brown-med);
+            padding: 3px 10px;
+            border-radius: var(--radius-full);
+            font-size: 0.66rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Loan Section */
+        .loan-section {
+            background: linear-gradient(160deg, #1F1006 0%, #2A1608 100%);
+        }
+
+        .loan-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 44px;
+            align-items: center;
+        }
+
+        .loan-highlight-box {
+            background: rgba(201, 164, 75, 0.08);
+            border: 1px solid rgba(201, 164, 75, 0.2);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            text-align: center;
+        }
+
+        .loan-highlight-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, #2A1608 0%, #3D1C02 100%);
+            padding: 56px 0;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: #fff;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.55);
+            margin-bottom: 24px;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brown-deep);
+            color: rgba(255, 255, 255, 0.55);
+            padding: 56px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .footer-brand .fb-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .social-dot {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .social-dot:hover {
+            background: var(--saffron-deep);
+            color: #fff;
+        }
+
+        .footer-col h5 {
+            font-size: 0.66rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 14px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 18px 0;
+            font-size: 0.7rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 44px;
+            height: 44px;
+            background: var(--saffron-deep);
+            color: #fff;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            transition: all var(--transition-smooth);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .hero .container { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .loan-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-cell { border-bottom: 1px solid var(--border-light); }
+            .stat-cell:nth-child(2) { border-right: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <span>📞 022-2625 0376 / 0381 | ✉️ headoffice@smjv.org</span>
+            <span>Mon–Sat: 10:00–6:30 | <a href="#">Events</a> | <a href="#">Alumni</a></span>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <div class="logo-icon">🕊</div>
+                <div class="logo-text">
+                    <strong>SMJV</strong>
+                    <span>Shri Mahavira Jaina Vidyalaya</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="hostel.html">Hostels</a></li>
+                <li><a href="#">Financial Aid</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="donation.html" class="btn btn--primary btn--sm">Donate</a>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="hostel.html">Hostels</a>
+        <a href="#">Financial Aid</a>
+        <a href="#">Reviews</a>
+        <a href="#">News</a>
+        <a href="contact.html">Contact</a>
+        <div class="mobile-cta">
+            <a href="donation.html" class="btn btn--primary" style="display:block;text-align:center;">Donate</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-left reveal">
+                <div class="hero-badge"><span class="badge-dot"></span> Est. June 18, 1915</div>
+                <h1>Empowering Jain Students<br><em>For Over a</em> <span class="highlight">Century</span></h1>
+                <p class="hero-desc">India's pioneering Jain educational trust — 12 hostels across 7 cities, interest-free financial aid, and spiritual nurturing since 1915.</p>
+                <div class="hero-actions">
+                    <a href="hostel.html" class="btn btn--primary btn--lg">Explore Hostels →</a>
+                    <a href="#" class="btn btn--gold btn--lg">Financial Aid</a>
+                    <a href="#" class="btn btn--white btn--lg">Apply Online</a>
+                </div>
+                <div class="hero-stats-row">
+                    <div><span class="hero-stat-val">30,000+</span><span class="hero-stat-lbl">Students Served</span></div>
+                    <div><span class="hero-stat-val">12</span><span class="hero-stat-lbl">Hostels</span></div>
+                    <div><span class="hero-stat-val">₹50 Cr+</span><span class="hero-stat-lbl">Aid Disbursed</span></div>
+                </div>
+            </div>
+            <div class="hero-right reveal reveal-delay-2">
+                <div class="hero-card-main">
+                    <h4>🎓 Hostel Admissions Open 2025–26</h4>
+                    <p>New, renewal & casual admissions now being accepted online.</p>
+                </div>
+                <div class="hero-card-grid">
+                    <div class="hero-mini-card"><span class="mini-val">⭐ 4.8</span><span class="mini-lbl">Avg Hostel Rating</span></div>
+                    <div class="hero-mini-card"><span class="mini-val">7</span><span class="mini-lbl">Cities Across India</span></div>
+                    <div class="hero-mini-card"><span class="mini-val">19</span><span class="mini-lbl">Agam Prakashan</span></div>
+                    <div class="hero-mini-card"><span class="mini-val">30+</span><span class="mini-lbl">Countries – Alumni</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="ticker-wrap">
+        <div class="ticker-track">
+            <span>12 Hostels Across India</span><span>·</span><span>Interest-Free Education Loans</span><span>·</span>
+            <span>7 Shikarbandhi Derasar</span><span>·</span><span>30,000+ Students Served</span><span>·</span>
+            <span>Est. 1915</span><span>·</span><span>FCRA & 80G Registered</span><span>·</span><span>⭐ 4.8 Rated</span>
+        </div>
+    </div>
+
+    <div class="stats-banner">
+        <div class="container" style="padding:0;">
+            <div class="stats-grid">
+                <div class="stat-cell"><span class="stat-num">12</span><span class="stat-desc">Hostels (8 Boys + 4 Girls)</span></div>
+                <div class="stat-cell"><span class="stat-num">2,000+</span><span class="stat-desc">Student Capacity</span></div>
+                <div class="stat-cell"><span class="stat-num">₹50 Cr</span><span class="stat-desc">Aid Disbursed</span></div>
+                <div class="stat-cell"><span class="stat-num">30,000+</span><span class="stat-desc">Availed Facilities</span></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section section--alt section--sm">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual reveal">
+                    <div class="about-img-large"></div>
+                    <div class="about-img-accent"></div>
+                    <div class="about-badge-floating"><span class="yr">1915</span><span class="lbl">Established</span></div>
+                </div>
+                <div class="about-content reveal reveal-delay-2">
+                    <div class="section-eyebrow">About SMJV</div>
+                    <h2 class="section-title" style="text-align:left;">106+ Years of Service & Excellence</h2>
+                    <p style="font-size:0.88rem;color:var(--text-secondary);">Established on <strong>June 18, 1915</strong> under the blessings of Acharya Bhagwant <strong>Shri Vijay Vallabh Suriswarji Maharaj Saheb</strong>, SMJV is one of India's oldest Jain educational trusts — providing hostels, financial support, and spiritual grounding to thousands.</p>
+                    <div class="mission-quote">
+                        <p>"જીવનમાં આત્મ કલ્યાણ અને લોકકલ્યાણની ભાવનાનો પુણ્ય સંગમ..."</p>
+                        <cite>— A blessed confluence of self-welfare and community service</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--sm">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-eyebrow">Our Hostels</div>
+                <h2 class="section-title">Find Your Home Across 7 Cities</h2>
+            </div>
+            <div class="hostel-grid">
+                <div class="hostel-card reveal"><div class="hostel-card-top" style="background:linear-gradient(135deg,#8B2500,#C8551E);"><span class="hostel-badge">2 Hostels</span><div class="hostel-city">Mumbai</div></div><div class="hostel-card-body"><div class="hostel-stars">★★★★★ <span class="rating-num">4.9 (128 reviews)</span></div><p>Sandhurst Road & Andheri — boys' hostels with Jinalaya, library & pure Jain meals.</p><div class="hostel-meta"><span>🕌 Jinalaya</span><span>🍽 Jain Meals</span></div><a href="hostel.html" class="btn btn--outline btn--sm">View Details →</a></div></div>
+                <div class="hostel-card reveal reveal-delay-1"><div class="hostel-card-top" style="background:linear-gradient(135deg,#5A2D0C,#8B4513);"><span class="hostel-badge">2 Hostels</span><div class="hostel-city">Vadodara</div></div><div class="hostel-card-body"><div class="hostel-stars">★★★★★ <span class="rating-num">4.7 (96 reviews)</span></div><p>Separate boys' & girls' hostels with full boarding, Jin Pooja & sports.</p><div class="hostel-meta"><span>🕌 Jinalaya</span><span>⚽ Sports</span></div><a href="hostel.html" class="btn btn--outline btn--sm">View Details →</a></div></div>
+                <div class="hostel-card reveal reveal-delay-2"><div class="hostel-card-top" style="background:linear-gradient(135deg,#1A4A1A,#2E7D32);"><span class="hostel-badge">2 Hostels</span><div class="hostel-city">Ahmedabad</div></div><div class="hostel-card-body"><div class="hostel-stars">★★★★☆ <span class="rating-num">4.6 (74 reviews)</span></div><p>Boys' hostel with strict Jain dietary compliance.</p><div class="hostel-meta"><span>🍽 Jain Diet</span><span>🕌 Derasar</span></div><a href="hostel.html" class="btn btn--outline btn--sm">View Details →</a></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--alt section--sm">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-eyebrow">Student Reviews</div>
+                <h2 class="section-title">What Our Students Say</h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card reveal"><div class="review-header"><div class="review-avatar">PK</div><div><div class="reviewer-name">Priya K.</div><div class="reviewer-date">Mumbai Hostel</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">"The Andheri girls' hostel is incredibly well-maintained. The Jinalaya on-site makes daily pooja so convenient."</p><span class="review-tag">🏠 Hostel Amenities</span></div>
+                <div class="review-card reveal reveal-delay-1"><div class="review-header"><div class="review-avatar">AS</div><div><div class="reviewer-name">Amit S.</div><div class="reviewer-date">Vadodara Hostel</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">"SMJV's financial aid helped me complete my engineering degree without any burden. The interest-free loan process was smooth."</p><span class="review-tag">💰 Financial Aid</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section loan-section section--sm">
+        <div class="container">
+            <div class="loan-grid">
+                <div class="loan-content reveal">
+                    <div class="section-eyebrow" style="color:var(--gold-light);background:rgba(201,164,75,0.1);">Financial Aid</div>
+                    <h2 class="section-title" style="color:#fff;">Interest-Free Education Loans</h2>
+                    <p class="section-sub" style="color:rgba(255,255,255,0.55);">No interest. No barriers. Supporting Jain students in higher education across India and abroad.</p>
+                    <a href="#" class="btn btn--gold">Learn More & Apply</a>
+                </div>
+                <div class="loan-highlight-box reveal reveal-delay-2">
+                    <h3>🏛 Trust Seat Donation</h3>
+                    <p>Donate <strong>₹11 Lac</strong> to create a permanent seat funding a student's education in your name.</p>
+                    <a href="donation.html" class="btn btn--sm btn--gold">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Ready to Join the SMJV Family?</h2>
+                <p>Apply for hostel admission, financial aid, or share your review to help future students.</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn btn--primary btn--lg">Apply Online</a>
+                    <a href="donation.html" class="btn btn--gold btn--lg">Support Us</a>
+                    <a href="#" class="btn btn--white btn--lg">Write a Review</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="fb-name">Shri Mahavira Jaina Vidyalaya</span>
+                    <p>Est. June 18, 1915 — Promoting Jain values alongside quality education for over a century.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-dot">f</a>
+                        <a href="#" class="social-dot">in</a>
+                        <a href="#" class="social-dot">📷</a>
+                        <a href="mailto:headoffice@smjv.org" class="social-dot">✉</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="hostel.html">Hostels</a>
+                    <a href="#">Financial Aid</a>
+                    <a href="donation.html">Donate</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Hostel Cities</h5>
+                    <a href="#">Mumbai</a>
+                    <a href="#">Vadodara</a>
+                    <a href="#">Ahmedabad</a>
+                    <a href="#">Surat</a>
+                    <a href="#">Pune</a>
+                    <a href="#">Bhavnagar</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <a href="#">Prospectus</a>
+                    <a href="#">Alumni Portal</a>
+                    <a href="#">Annual Report</a>
+                    <a href="#">Write a Review</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 SMJV. All rights reserved. | FCRA & 80G / 12A Registered</span>
+                <span>headoffice@smjv.org | <a href="#">Privacy</a> <a href="#">Terms</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backTop">↑</button>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+            backTop.classList.toggle('show', window.scrollY > 500);
+        });
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        const ham = document.getElementById('hamburger');
+        const mm = document.getElementById('mobileMenu');
+        ham.addEventListener('click', () => {
+            mm.classList.toggle('open');
+            const spans = ham.querySelectorAll('span');
+            if (mm.classList.contains('open')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+            }
+        });
+        mm.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mm.classList.remove('open');
+                document.querySelectorAll('#hamburger span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+            });
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

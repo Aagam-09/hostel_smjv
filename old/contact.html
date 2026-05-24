@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMJV – Contact Us | Shri Mahavira Jaina Vidyalaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ====== GLOBAL STYLES (IDENTICAL TO HOMEPAGE) ====== */
+        :root {
+            --saffron: #E8723A;
+            --saffron-deep: #C8551E;
+            --saffron-glow: #F4945C;
+            --gold: #C9A44B;
+            --gold-light: #E0C87A;
+            --gold-pale: #F5ECD7;
+            --cream: #FDF9F2;
+            --ivory: #F7F1E4;
+            --warm-bg: #FFFEFA;
+            --brown-deep: #1F1006;
+            --brown: #3D1C02;
+            --brown-med: #5C3010;
+            --text-primary: #1A0D04;
+            --text-secondary: #5C3D2A;
+            --text-muted: #8B6F58;
+            --border-subtle: #E8DDD0;
+            --border-light: #F0E8DB;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(30, 10, 2, 0.04), 0 1px 2px rgba(30, 10, 2, 0.03);
+            --shadow-md: 0 4px 16px rgba(30, 10, 2, 0.06), 0 2px 6px rgba(30, 10, 2, 0.04);
+            --shadow-lg: 0 12px 40px rgba(30, 10, 2, 0.10), 0 4px 12px rgba(30, 10, 2, 0.05);
+            --shadow-xl: 0 20px 60px rgba(30, 10, 2, 0.14), 0 8px 24px rgba(30, 10, 2, 0.06);
+            --shadow-glow-saffron: 0 0 40px rgba(232, 114, 58, 0.25), 0 8px 24px rgba(200, 85, 30, 0.18);
+            --shadow-glow-gold: 0 0 36px rgba(201, 164, 75, 0.22), 0 6px 20px rgba(180, 140, 50, 0.14);
+            --radius-xs: 6px;
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 22px;
+            --radius-xl: 28px;
+            --radius-full: 9999px;
+            --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--warm-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section--sm {
+            padding: 56px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--saffron-deep);
+            margin-bottom: 10px;
+            background: rgba(232, 114, 58, 0.07);
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+        }
+
+        .section-eyebrow::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--saffron);
+            box-shadow: 0 0 8px var(--saffron-glow);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--brown-deep);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 12px 26px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.84rem;
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn--primary {
+            background: var(--saffron);
+            color: #fff;
+        }
+
+        .btn--primary:hover {
+            background: var(--saffron-deep);
+            transform: translateY(-2px);
+        }
+
+        .btn--outline {
+            background: transparent;
+            color: var(--saffron-deep);
+            border: 2px solid var(--saffron-deep);
+        }
+
+        .btn--outline:hover {
+            background: var(--saffron-deep);
+            color: #fff;
+        }
+
+        /* Topbar */
+        .topbar {
+            background: var(--brown-deep);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.7rem;
+            padding: 7px 0;
+        }
+
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topbar a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 254, 250, 0.92);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            border-bottom-color: var(--border-subtle);
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--saffron-deep), var(--saffron));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .logo-text strong {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            color: var(--brown-deep);
+        }
+
+        .logo-text span {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            padding: 8px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: var(--saffron-deep);
+            background: rgba(232, 114, 58, 0.06);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 22px;
+            height: 2.5px;
+            background: var(--brown-deep);
+            border-radius: 3px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            top: 64px;
+            background: rgba(255, 254, 250, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 900;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            padding: 14px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 0.92rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Hero */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--brown-deep) 0%, #2A1608 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .contact-hero p {
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        /* Contact Info Cards */
+        .info-card {
+            background: #fff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 24px;
+            transition: all var(--transition-smooth);
+        }
+
+        .info-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+
+        .info-icon {
+            width: 54px;
+            height: 54px;
+            background: linear-gradient(135deg, var(--saffron-deep), var(--saffron));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .info-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--brown-deep);
+            margin-bottom: 12px;
+        }
+
+        .info-card p,
+        .info-card a {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .info-card a:hover {
+            color: var(--saffron-deep);
+        }
+
+        /* Office Address */
+        .office-address {
+            background: linear-gradient(135deg, var(--ivory), var(--cream));
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .office-address h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--brown-deep);
+            margin-bottom: 16px;
+        }
+
+        .office-address p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: #fff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+        }
+
+        .contact-form h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--brown-deep);
+            margin-bottom: 8px;
+        }
+
+        .contact-form .form-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            transition: all var(--transition-fast);
+            background: var(--warm-bg);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--saffron);
+            box-shadow: 0 0 0 3px rgba(232, 114, 58, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            justify-content: center;
+            background: var(--saffron);
+            color: #fff;
+        }
+
+        .btn-submit:hover {
+            background: var(--saffron-deep);
+        }
+
+        /* Map Section */
+        .map-section {
+            background: var(--ivory);
+        }
+
+        .map-container {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brown-deep);
+            color: rgba(255, 255, 255, 0.55);
+            padding: 56px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .footer-brand .fb-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .footer-brand p {
+            font-size: 0.78rem;
+            max-width: 260px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .social-dot {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all var(--transition-smooth);
+        }
+
+        .social-dot:hover {
+            background: var(--saffron-deep);
+            color: #fff;
+        }
+
+        .footer-col h5 {
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 14px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 18px 0;
+            font-size: 0.7rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 44px;
+            height: 44px;
+            background: var(--saffron-deep);
+            color: #fff;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            transition: all var(--transition-smooth);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <span>📞 022-2625 0376 / 0381 <span class="separator">|</span> ✉️ headoffice@smjv.org</span>
+            <span>Mon–Sat: 10:00–6:30 <span class="separator">|</span> <a href="#">Events</a> <span class="separator">|</span> <a href="#">Alumni</a></span>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <div class="logo-icon">🕊</div>
+                <div class="logo-text">
+                    <strong>SMJV</strong>
+                    <span>Shri Mahavira Jaina Vidyalaya</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Hostels</a></li>
+                <li><a href="#">Financial Aid</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="donation.html" class="btn btn--primary btn--sm">Donate</a>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Hostels</a>
+        <a href="#">Financial Aid</a>
+        <a href="#">Reviews</a>
+        <a href="#">News</a>
+        <a href="contact.html">Contact</a>
+        <div class="mobile-cta">
+            <a href="donation.html" class="btn btn--primary" style="display:block;text-align:center;">Donate</a>
+        </div>
+    </div>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="reveal">Contact Us</h1>
+            <p class="reveal reveal-delay-1">Have questions about hostel admissions, financial aid, or want to support our mission? We're here to help.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left Side - Contact Info -->
+                <div>
+                    <div class="info-card reveal">
+                        <div class="info-icon">📞</div>
+                        <h3>Phone Numbers</h3>
+                        <p><strong>Head Office:</strong> 022-2625 0376 / 0381</p>
+                        <p><strong>Mumbai Hostel (Sandhurst Road):</strong> 022-2625 0382</p>
+                        <p><strong>Mumbai Hostel (Andheri):</strong> 022-2625 0383</p>
+                        <p><strong>Vadodara Hostel:</strong> 0265-242 1234</p>
+                    </div>
+
+                    <div class="info-card reveal reveal-delay-1">
+                        <div class="info-icon">✉️</div>
+                        <h3>Email Addresses</h3>
+                        <a href="mailto:headoffice@smjv.org">📧 headoffice@smjv.org</a>
+                        <a href="mailto:admissions@smjv.org">📧 admissions@smjv.org</a>
+                        <a href="mailto:donations@smjv.org">📧 donations@smjv.org</a>
+                        <a href="mailto:alumni@smjv.org">📧 alumni@smjv.org</a>
+                    </div>
+
+                    <div class="office-address reveal reveal-delay-2">
+                        <h3>🏛 Head Office Address</h3>
+                        <p>Shri Mahavira Jaina Vidyalaya Trust<br>
+                        Sandhurst Road, opp. Police Commissioner Office,<br>
+                        Near Sandhurst Road Station,<br>
+                        Mumbai – 400 007, Maharashtra, India</p>
+                        <p style="margin-top: 12px;"><strong>📍 Landmark:</strong> Near Sandhurst Road Railway Station (Western Line)</p>
+                    </div>
+                </div>
+
+                <!-- Right Side - Contact Form -->
+                <div class="contact-form reveal reveal-delay-1">
+                    <h3>Send us a Message</h3>
+                    <p class="form-sub">We'll get back to you within 2-3 business days.</p>
+                    
+                    <form id="contactForm" action="#" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" name="email" required placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label>I am a *</label>
+                                <select name="userType">
+                                    <option value="student">Student</option>
+                                    <option value="parent">Parent</option>
+                                    <option value="alumni">Alumni</option>
+                                    <option value="donor">Donor / Supporter</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Subject *</label>
+                            <select name="subject" required>
+                                <option value="">-- Select Subject --</option>
+                                <option value="admission">Hostel Admission Inquiry</option>
+                                <option value="financial">Financial Aid / Loan Inquiry</option>
+                                <option value="donation">Donation / Sponsorship</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="complaint">Suggestion / Complaint</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Message *</label>
+                            <textarea name="message" rows="5" required placeholder="Please write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit btn--lg">Send Message <span class="arrow-icon">→</span></button>
+                    </form>
+
+                    <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 16px; text-align: center;">
+                        * We respect your privacy. Your information will not be shared with third parties.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section section--sm">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-eyebrow">Find Us</div>
+                <h2 class="section-title">Our Location</h2>
+            </div>
+            <div class="map-container reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.2419!2d72.8245!3d18.9734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf5e8cfeabf5%3A0xf6c5bf2b5b7e1c3!2sSandhurst%20Road%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="fb-name">Shri Mahavira Jaina Vidyalaya</span>
+                    <p>Est. June 18, 1915 — Promoting Jain values alongside quality education for over a century.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-dot">f</a>
+                        <a href="#" class="social-dot">in</a>
+                        <a href="#" class="social-dot">📷</a>
+                        <a href="mailto:headoffice@smjv.org" class="social-dot">✉</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Hostels</a>
+                    <a href="#">Financial Aid</a>
+                    <a href="donation.html">Donate</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Hostel Cities</h5>
+                    <a href="#">Mumbai</a>
+                    <a href="#">Vadodara</a>
+                    <a href="#">Ahmedabad</a>
+                    <a href="#">Surat</a>
+                    <a href="#">Pune</a>
+                    <a href="#">Bhavnagar</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <a href="#">Prospectus</a>
+                    <a href="#">Alumni Portal</a>
+                    <a href="#">Annual Report</a>
+                    <a href="#">Write a Review</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 SMJV. All rights reserved. | FCRA & 80G / 12A Registered</span>
+                <span>headoffice@smjv.org | <a href="#">Privacy</a> <a href="#">Terms</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backTop">↑</button>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        const backTop = document.getElementById('backTop');
+
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+            backTop.classList.toggle('show', window.scrollY > 500);
+        });
+
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Mobile menu
+        const ham = document.getElementById('hamburger');
+        const mm = document.getElementById('mobileMenu');
+        ham.addEventListener('click', () => {
+            mm.classList.toggle('open');
+            const spans = ham.querySelectorAll('span');
+            if (mm.classList.contains('open')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+            }
+        });
+
+        mm.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mm.classList.remove('open');
+                document.querySelectorAll('#hamburger span').forEach(s => {
+                    s.style.transform = ''; s.style.opacity = '';
+                });
+            });
+        });
+
+        // Reveal animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Form submit alert (remove this when connecting to backend)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Our team will get back to you soon.\n\n(Form submission is currently in demo mode. Connect to backend for live functionality.)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

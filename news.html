@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMJV – News & Updates | Events & Announcements</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #E8723A;
+            --saffron-deep: #C8551E;
+            --gold: #C9A44B;
+            --gold-light: #E0C87A;
+            --gold-pale: #F5ECD7;
+            --cream: #FDF9F2;
+            --ivory: #F7F1E4;
+            --warm-bg: #FFFEFA;
+            --brown-deep: #1F1006;
+            --text-primary: #1A0D04;
+            --text-secondary: #5C3D2A;
+            --text-muted: #8B6F58;
+            --border-subtle: #E8DDD0;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(30,10,2,0.04);
+            --shadow-md: 0 4px 16px rgba(30,10,2,0.06);
+            --shadow-lg: 0 12px 40px rgba(30,10,2,0.10);
+            --shadow-xl: 0 20px 60px rgba(30,10,2,0.14);
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 22px;
+            --radius-xl: 28px;
+            --radius-full: 9999px;
+            --transition-smooth: 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--warm-bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 80px 0; }
+        .section--sm { padding: 56px 0; }
+        .section--alt { background: var(--ivory); }
+        .section-header { text-align: center; margin-bottom: 48px; }
+        .section-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--saffron-deep); margin-bottom: 10px; background: rgba(232,114,58,0.07); padding: 6px 14px; border-radius: var(--radius-full); }
+        .section-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--saffron); }
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,4vw,2.8rem); font-weight: 700; color: var(--brown-deep); }
+        .btn { display: inline-flex; align-items: center; gap: 7px; padding: 12px 26px; border-radius: var(--radius-full); font-weight: 600; font-size: 0.84rem; text-decoration: none; transition: all var(--transition-smooth); cursor: pointer; border: none; }
+        .btn--primary { background: var(--saffron); color: #fff; }
+        .btn--primary:hover { background: var(--saffron-deep); transform: translateY(-2px); }
+        .btn--outline { background: transparent; color: var(--saffron-deep); border: 2px solid var(--saffron-deep); }
+        .btn--outline:hover { background: var(--saffron-deep); color: #fff; }
+        .btn--sm { padding: 9px 18px; font-size: 0.78rem; }
+        /* Topbar & Navbar */
+        .topbar { background: var(--brown-deep); color: rgba(255,255,255,0.7); font-size: 0.7rem; padding: 7px 0; }
+        .topbar .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+        .topbar a { color: var(--gold-light); text-decoration: none; }
+        .navbar { position: sticky; top: 0; z-index: 1000; background: rgba(255,254,250,0.92); backdrop-filter: blur(18px); border-bottom: 1px solid transparent; transition: all var(--transition-smooth); }
+        .navbar.scrolled { border-bottom-color: var(--border-subtle); box-shadow: var(--shadow-md); }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--saffron-deep), var(--saffron)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fff; }
+        .logo-text strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--brown-deep); }
+        .logo-text span { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; }
+        .nav-links { display: flex; gap: 2px; list-style: none; }
+        .nav-links li a { padding: 8px 14px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: all var(--transition-smooth); }
+        .nav-links li a:hover, .nav-links li a.active { color: var(--saffron-deep); background: rgba(232,114,58,0.06); }
+        .nav-actions { display: flex; gap: 10px; }
+        .hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; }
+        .hamburger span { width: 22px; height: 2.5px; background: var(--brown-deep); border-radius: 3px; }
+        .mobile-menu { display: none; position: fixed; inset: 0; top: 64px; background: rgba(255,254,250,0.98); backdrop-filter: blur(20px); z-index: 900; padding: 20px; flex-direction: column; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { padding: 14px 18px; border-radius: var(--radius-sm); font-size: 0.92rem; color: var(--text-primary); text-decoration: none; font-weight: 500; }
+        /* Hero */
+        .news-hero { background: linear-gradient(135deg, #1F1006 0%, #2A1608 100%); padding: 80px 0; text-align: center; }
+        .news-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem,5vw,3.5rem); color: #fff; margin-bottom: 16px; }
+        .news-hero p { color: rgba(255,255,255,0.6); max-width: 680px; margin: 0 auto; }
+        /* News Grid */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 32px; margin-bottom: 48px; }
+        .news-card { background: #fff; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); transition: all var(--transition-smooth); }
+        .news-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+        .news-image { height: 200px; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding: 20px; }
+        .news-date { background: var(--saffron); color: #fff; padding: 5px 12px; border-radius: var(--radius-full); font-size: 0.7rem; font-weight: 600; display: inline-block; }
+        .news-content { padding: 24px; }
+        .news-category { font-size: 0.7rem; color: var(--saffron-deep); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .news-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+        .news-excerpt { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.6; }
+        /* Events Sidebar */
+        .events-sidebar { background: #fff; border-radius: var(--radius-lg); padding: 28px; border: 1px solid var(--border-subtle); }
+        .event-item { padding: 16px 0; border-bottom: 1px solid var(--border-light); }
+        .event-item:last-child { border-bottom: none; }
+        .event-date { font-size: 0.7rem; color: var(--saffron-deep); font-weight: 600; }
+        .event-title { font-weight: 600; margin: 5px 0; }
+        .event-location { font-size: 0.7rem; color: var(--text-muted); }
+        /* Newsletter */
+        .newsletter { background: var(--brown-deep); border-radius: var(--radius-xl); padding: 48px; text-align: center; color: #fff; }
+        .newsletter h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 12px; }
+        .newsletter input { padding: 14px 20px; border-radius: var(--radius-full); border: none; width: 300px; max-width: 70%; margin-right: 12px; }
+        .newsletter button { background: var(--saffron); color: #fff; border: none; padding: 14px 28px; border-radius: var(--radius-full); cursor: pointer; }
+        /* Footer */
+        footer { background: var(--brown-deep); color: rgba(255,255,255,0.55); padding: 56px 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .footer-brand .fb-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: #fff; display: block; margin-bottom: 8px; }
+        .footer-brand p { font-size: 0.78rem; max-width: 260px; }
+        .footer-social { display: flex; gap: 8px; margin-top: 16px; }
+        .social-dot { width: 36px; height: 36px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: rgba(255,255,255,0.5); }
+        .social-dot:hover { background: var(--saffron-deep); color: #fff; }
+        .footer-col h5 { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; color: var(--gold-light); margin-bottom: 14px; }
+        .footer-col a { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.45); text-decoration: none; padding: 5px 0; }
+        .footer-col a:hover { color: #fff; }
+        .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 18px 0; font-size: 0.7rem; }
+        .back-to-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: var(--saffron-deep); color: #fff; border-radius: 50%; border: none; cursor: pointer; opacity: 0; transition: all var(--transition-smooth); }
+        .back-to-top.show { opacity: 1; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } .footer-grid { grid-template-columns: 1fr; } .news-grid { grid-template-columns: 1fr; } .newsletter input { width: 100%; margin-bottom: 12px; } }
+    </style>
+</head>
+<body>
+    <div class="topbar"><div class="container"><span>📞 022-2625 0376 / 0381 | ✉️ headoffice@smjv.org</span><span>Mon–Sat: 10:00–6:30 | <a href="#">Events</a> | <a href="#">Alumni</a></span></div></div>
+    <nav class="navbar" id="navbar"><div class="container"><a href="index.html" class="logo-link"><div class="logo-icon">🕊</div><div class="logo-text"><strong>SMJV</strong><span>Shri Mahavira Jaina Vidyalaya</span></div></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="hostel.html">Hostels</a></li><li><a href="financial-aid.html">Financial Aid</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="news.html" class="active">News</a></li><li><a href="contact.html">Contact</a></li></ul><div class="nav-actions"><a href="donation.html" class="btn btn--primary btn--sm">Donate</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></div></nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="hostel.html">Hostels</a><a href="financial-aid.html">Financial Aid</a><a href="reviews.html">Reviews</a><a href="news.html">News</a><a href="contact.html">Contact</a><div><a href="donation.html" class="btn btn--primary" style="display:block;text-align:center;">Donate</a></div></div>
+
+    <section class="news-hero"><div class="container"><h1 class="reveal">News & Updates</h1><p class="reveal">Stay informed with the latest announcements, events, and stories from SMJV.</p></div></section>
+
+    <section class="section section--sm">
+        <div class="container">
+            <div class="news-grid">
+                <div class="news-card reveal"><div class="news-image" style="background: linear-gradient(135deg, #8B2500, #C8551E);"><span class="news-date">March 15, 2025</span></div><div class="news-content"><div class="news-category">📢 Announcement</div><h3 class="news-title">Hostel Admissions Open for 2025-26</h3><p class="news-excerpt">Applications are now open for new, renewal and casual admissions across all 12 hostels. Last date: June 30, 2025.</p><a href="#" class="btn btn--outline btn--sm">Read More →</a></div></div>
+                <div class="news-card reveal"><div class="news-image" style="background: linear-gradient(135deg, #2c3e50, #16a085);"><span class="news-date">March 10, 2025</span></div><div class="news-content"><div class="news-category">🎓 Scholarship</div><h3 class="news-title">Financial Aid Applications Open</h3><p class="news-excerpt">Interest-free education loans for Jain students pursuing higher education. Apply before April 30, 2025.</p><a href="financial-aid.html" class="btn btn--outline btn--sm">Apply Now →</a></div></div>
+                <div class="news-card reveal"><div class="news-image" style="background: linear-gradient(135deg, #5A2D0C, #CD853F);"><span class="news-date">March 5, 2025</span></div><div class="news-content"><div class="news-category">🕊️ Event</div><h3 class="news-title">Mahavir Jayanti Celebration 2025</h3><p class="news-excerpt">Join us on April 10, 2025 at all SMJV hostels for special prayers, discourse, and community lunch.</p><a href="#" class="btn btn--outline btn--sm">Event Details →</a></div></div>
+                <div class="news-card reveal"><div class="news-image" style="background: linear-gradient(135deg, #B76E79, #D87093);"><span class="news-date">February 20, 2025</span></div><div class="news-content"><div class="news-category">🏆 Achievement</div><h3 class="news-title">SMJV Students Excel in CA Exams</h3><p class="news-excerpt">Congratulations to 45 hostel students who successfully cleared CA Intermediate and Final exams.</p><a href="#" class="btn btn--outline btn--sm">Read More →</a></div></div>
+            </div>
+
+            <div class="reveal"><div class="section-header"><div class="section-eyebrow">Stay Updated</div><h2 class="section-title">Upcoming Events</h2></div>
+            <div class="events-sidebar"><div class="event-item"><div class="event-date">📅 April 10, 2025</div><div class="event-title">Mahavir Jayanti Celebration</div><div class="event-location">📍 All SMJV Hostels</div></div><div class="event-item"><div class="event-date">📅 April 25, 2025</div><div class="event-title">Alumni Meet 2025 - Mumbai</div><div class="event-location">📍 Sandhurst Road Hostel, Mumbai</div></div><div class="event-item"><div class="event-date">📅 May 5-10, 2025</div><div class="event-title">Annual Sports Week</div><div class="event-location">📍 Vadodara & Pune Hostels</div></div><div class="event-item"><div class="event-date">📅 June 18, 2025</div><div class="event-title">110th Foundation Day</div><div class="event-location">📍 All Locations</div></div></div></div>
+
+            <div class="newsletter reveal" style="margin-top: 48px;"><h3>📧 Subscribe to Our Newsletter</h3><p style="margin-bottom: 20px;">Get the latest updates, events, and announcements directly in your inbox.</p><form id="newsletterForm"><input type="email" placeholder="Enter your email address" required><button type="submit">Subscribe</button></form></div>
+        </div>
+    </section>
+
+        <!-- Footer - Copy this exact code in all pages -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="fb-name">Shri Mahavira Jaina Vidyalaya</span>
+                    <p>Est. June 18, 1915 — Promoting Jain values alongside quality education for over a century.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/smjv" class="social-dot" target="_blank">f</a>
+                        <a href="https://linkedin.com/company/smjv" class="social-dot" target="_blank">in</a>
+                        <a href="https://instagram.com/smjv" class="social-dot" target="_blank">📷</a>
+                        <a href="mailto:headoffice@smjv.org" class="social-dot">✉</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="hostel.html">Hostels</a>
+                    <a href="financial-aid.html">Financial Aid</a>
+                    <a href="donation.html">Donate</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Hostel Cities</h5>
+                    <a href="hostel.html?city=mumbai">📍 Mumbai (3 Hostels)</a>
+                    <a href="hostel.html?city=vadodara">📍 Vadodara (2 Hostels)</a>
+                    <a href="hostel.html?city=ahmedabad">📍 Ahmedabad (2 Hostels)</a>
+                    <a href="hostel.html?city=pune">📍 Pune (2 Hostels)</a>
+                    <a href="hostel.html?city=surat">📍 Surat (1 Hostel)</a>
+                    <a href="hostel.html?city=bhavnagar">📍 Bhavnagar (1 Hostel)</a>
+                    <a href="hostel.html?city=vallabh">📍 Vallabh Vidyanagar (2 Hostels)</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <a href="#">Prospectus</a>
+                    <a href="#">Alumni Portal</a>
+                    <a href="#">Annual Report</a>
+                    <a href="reviews.html">Write a Review</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 SMJV. All rights reserved. | FCRA & 80G / 12A Registered</span>
+                <span>headoffice@smjv.org | <a href="#">Privacy</a> | <a href="#">Terms</a></span>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backTop">↑</button>
+
+    <script>
+        const navbar = document.getElementById('navbar'), backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); backTop.classList.toggle('show', window.scrollY > 500); });
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        const ham = document.getElementById('hamburger'), mm = document.getElementById('mobileMenu');
+        ham.addEventListener('click', () => { mm.classList.toggle('open'); const spans = ham.querySelectorAll('span'); if (mm.classList.contains('open')) { spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)'; spans[1].style.opacity = '0'; spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)'; } else { spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; }); } });
+        mm.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mm.classList.remove('open'); document.querySelectorAll('#hamburger span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; }); }); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        document.getElementById('newsletterForm')?.addEventListener('submit', (e) => { e.preventDefault(); alert('Thank you for subscribing! You will receive our latest updates.'); e.target.reset(); });
+    </script>
+</body>
+</html>

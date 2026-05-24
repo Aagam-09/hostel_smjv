@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMJV – Reviews | Student Testimonials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #E8723A;
+            --saffron-deep: #C8551E;
+            --gold: #C9A44B;
+            --gold-light: #E0C87A;
+            --gold-pale: #F5ECD7;
+            --cream: #FDF9F2;
+            --ivory: #F7F1E4;
+            --warm-bg: #FFFEFA;
+            --brown-deep: #1F1006;
+            --text-primary: #1A0D04;
+            --text-secondary: #5C3D2A;
+            --text-muted: #8B6F58;
+            --border-subtle: #E8DDD0;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(30,10,2,0.04);
+            --shadow-md: 0 4px 16px rgba(30,10,2,0.06);
+            --shadow-lg: 0 12px 40px rgba(30,10,2,0.10);
+            --shadow-xl: 0 20px 60px rgba(30,10,2,0.14);
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 22px;
+            --radius-xl: 28px;
+            --radius-full: 9999px;
+            --transition-smooth: 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--warm-bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 80px 0; }
+        .section--sm { padding: 56px 0; }
+        .section--alt { background: var(--ivory); }
+        .section-header { text-align: center; margin-bottom: 48px; }
+        .section-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--saffron-deep); margin-bottom: 10px; background: rgba(232,114,58,0.07); padding: 6px 14px; border-radius: var(--radius-full); }
+        .section-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--saffron); }
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,4vw,2.8rem); font-weight: 700; color: var(--brown-deep); }
+        .btn { display: inline-flex; align-items: center; gap: 7px; padding: 12px 26px; border-radius: var(--radius-full); font-weight: 600; font-size: 0.84rem; text-decoration: none; transition: all var(--transition-smooth); cursor: pointer; border: none; }
+        .btn--primary { background: var(--saffron); color: #fff; }
+        .btn--primary:hover { background: var(--saffron-deep); transform: translateY(-2px); }
+        .btn--outline { background: transparent; color: var(--saffron-deep); border: 2px solid var(--saffron-deep); }
+        .btn--outline:hover { background: var(--saffron-deep); color: #fff; }
+        .btn--sm { padding: 9px 18px; font-size: 0.78rem; }
+        /* Topbar & Navbar */
+        .topbar { background: var(--brown-deep); color: rgba(255,255,255,0.7); font-size: 0.7rem; padding: 7px 0; }
+        .topbar .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+        .topbar a { color: var(--gold-light); text-decoration: none; }
+        .navbar { position: sticky; top: 0; z-index: 1000; background: rgba(255,254,250,0.92); backdrop-filter: blur(18px); border-bottom: 1px solid transparent; transition: all var(--transition-smooth); }
+        .navbar.scrolled { border-bottom-color: var(--border-subtle); box-shadow: var(--shadow-md); }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--saffron-deep), var(--saffron)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fff; }
+        .logo-text strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--brown-deep); }
+        .logo-text span { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; }
+        .nav-links { display: flex; gap: 2px; list-style: none; }
+        .nav-links li a { padding: 8px 14px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: all var(--transition-smooth); }
+        .nav-links li a:hover, .nav-links li a.active { color: var(--saffron-deep); background: rgba(232,114,58,0.06); }
+        .nav-actions { display: flex; gap: 10px; }
+        .hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; }
+        .hamburger span { width: 22px; height: 2.5px; background: var(--brown-deep); border-radius: 3px; }
+        .mobile-menu { display: none; position: fixed; inset: 0; top: 64px; background: rgba(255,254,250,0.98); backdrop-filter: blur(20px); z-index: 900; padding: 20px; flex-direction: column; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { padding: 14px 18px; border-radius: var(--radius-sm); font-size: 0.92rem; color: var(--text-primary); text-decoration: none; font-weight: 500; }
+        /* Hero */
+        .reviews-hero { background: linear-gradient(135deg, #1F1006 0%, #2A1608 100%); padding: 80px 0; text-align: center; }
+        .reviews-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem,5vw,3.5rem); color: #fff; margin-bottom: 16px; }
+        .reviews-hero p { color: rgba(255,255,255,0.6); max-width: 680px; margin: 0 auto; }
+        /* Rating Summary */
+        .rating-summary { display: flex; align-items: center; justify-content: center; gap: 48px; margin-bottom: 48px; flex-wrap: wrap; }
+        .overall-rating { text-align: center; }
+        .big-rating { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 700; color: var(--saffron-deep); }
+        .stars-big { color: #f5b042; font-size: 1.2rem; letter-spacing: 4px; margin: 8px 0; }
+        /* Reviews Grid */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; margin-bottom: 48px; }
+        .review-card { background: #fff; border-radius: var(--radius-lg); padding: 28px; border: 1px solid var(--border-subtle); transition: all var(--transition-smooth); }
+        .review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .review-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+        .review-avatar { width: 52px; height: 52px; background: linear-gradient(135deg, var(--saffron), var(--saffron-deep)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; color: #fff; }
+        .review-stars { color: #f5b042; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 6px; }
+        .review-text { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 12px 0; }
+        .review-tag { display: inline-block; background: var(--gold-pale); padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.7rem; color: var(--brown-deep); margin-top: 12px; }
+        /* Write Review Form */
+        .write-review { background: #fff; border-radius: var(--radius-xl); padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid var(--border-subtle); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.85rem; background: var(--warm-bg); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(232,114,58,0.1); }
+        .star-rating { display: flex; gap: 8px; font-size: 1.5rem; cursor: pointer; }
+        .star-rating span { color: #ccc; transition: all var(--transition-smooth); }
+        .star-rating span.selected, .star-rating span:hover { color: #f5b042; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        /* Footer */
+        footer { background: var(--brown-deep); color: rgba(255,255,255,0.55); padding: 56px 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .footer-brand .fb-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: #fff; display: block; margin-bottom: 8px; }
+        .footer-brand p { font-size: 0.78rem; max-width: 260px; }
+        .footer-social { display: flex; gap: 8px; margin-top: 16px; }
+        .social-dot { width: 36px; height: 36px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: rgba(255,255,255,0.5); }
+        .social-dot:hover { background: var(--saffron-deep); color: #fff; }
+        .footer-col h5 { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; color: var(--gold-light); margin-bottom: 14px; }
+        .footer-col a { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.45); text-decoration: none; padding: 5px 0; }
+        .footer-col a:hover { color: #fff; }
+        .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 18px 0; font-size: 0.7rem; }
+        .back-to-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: var(--saffron-deep); color: #fff; border-radius: 50%; border: none; cursor: pointer; opacity: 0; transition: all var(--transition-smooth); }
+        .back-to-top.show { opacity: 1; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } .footer-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .rating-summary { flex-direction: column; gap: 20px; } }
+    </style>
+</head>
+<body>
+    <div class="topbar"><div class="container"><span>📞 022-2625 0376 / 0381 | ✉️ headoffice@smjv.org</span><span>Mon–Sat: 10:00–6:30 | <a href="#">Events</a> | <a href="#">Alumni</a></span></div></div>
+    <nav class="navbar" id="navbar"><div class="container"><a href="index.html" class="logo-link"><div class="logo-icon">🕊</div><div class="logo-text"><strong>SMJV</strong><span>Shri Mahavira Jaina Vidyalaya</span></div></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="hostel.html">Hostels</a></li><li><a href="financial-aid.html">Financial Aid</a></li><li><a href="reviews.html" class="active">Reviews</a></li><li><a href="news.html">News</a></li><li><a href="contact.html">Contact</a></li></ul><div class="nav-actions"><a href="donation.html" class="btn btn--primary btn--sm">Donate</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></div></nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="hostel.html">Hostels</a><a href="financial-aid.html">Financial Aid</a><a href="reviews.html">Reviews</a><a href="news.html">News</a><a href="contact.html">Contact</a><div><a href="donation.html" class="btn btn--primary" style="display:block;text-align:center;">Donate</a></div></div>
+
+    <section class="reviews-hero"><div class="container"><h1 class="reveal">Student Reviews</h1><p class="reveal">Real experiences from our hostel residents and financial aid recipients.</p></div></section>
+
+    <section class="section section--sm">
+        <div class="container">
+            <div class="rating-summary reveal"><div class="overall-rating"><div class="big-rating">4.8</div><div class="stars-big">★★★★★</div><div style="font-size:0.8rem;">Based on 500+ reviews</div></div><div><div>⭐⭐⭐⭐⭐ 5 star (385)</div><div>⭐⭐⭐⭐ 4 star (95)</div><div>⭐⭐⭐ 3 star (20)</div></div></div>
+
+            <div class="reviews-grid">
+                <div class="review-card reveal"><div class="review-header"><div class="review-avatar">PK</div><div><div class="reviewer-name">Priya K.</div><div class="reviewer-date">Mumbai Girls Hostel · 2024</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">"The Andheri girls' hostel is incredibly well-maintained. The Jinalaya on-site makes daily pooja so convenient. Food is excellent and pure Jain."</p><span class="review-tag">🏠 Hostel Amenities</span></div>
+                <div class="review-card reveal"><div class="review-header"><div class="review-avatar">AS</div><div><div class="reviewer-name">Amit S.</div><div class="reviewer-date">Vadodara Hostel · 2023</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">"SMJV's financial aid helped me complete my engineering degree without any burden. The interest-free loan process was smooth and transparent."</p><span class="review-tag">💰 Financial Aid</span></div>
+                <div class="review-card reveal"><div class="review-header"><div class="review-avatar">RJ</div><div><div class="reviewer-name">Rahul J.</div><div class="reviewer-date">Ahmedabad Hostel · 2024</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">"Best hostel for Jain students in Ahmedabad. Deraser on-site, pure Jain food, and very supportive staff. Highly recommended!"</p><span class="review-tag">🏠 Boys Hostel</span></div>
+                <div class="review-card reveal"><div class="review-header"><div class="review-avatar">MS</div><div><div class="reviewer-name">Meera S.</div><div class="reviewer-date">Pune Girls Hostel · 2024</div></div></div><div class="review-stars">★★★★☆</div><p class="review-text">"Safe and secure environment. Female wardens are very caring. The location is great, close to colleges. Jain meals are authentic."</p><span class="review-tag">👩 Girls Hostel</span></div>
+                <div class="review-card reveal"><div class="review-header"><div class="review-avatar">NP</div><div><div class="reviewer-name">Nikhil P.</div><div class="reviewer-date">Mumbai Hostel · 2022</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">"Sandhurst Road hostel is at prime location. Study rooms are great for preparation. The trust seat donation helped me get admission."</p><span class="review-tag">🎓 Trust Seat</span></div>
+                <div class="review-card reveal"><div class="review-header"><div class="review-avatar">DV</div><div><div class="reviewer-name">Dhara V.</div><div class="reviewer-date">V.V. Nagar · 2024</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">"Vallabh Vidyanagar girls hostel is very safe. Female wardens are always available. Jinalaya and library are added benefits."</p><span class="review-tag">🕌 Jinalaya</span></div>
+            </div>
+
+            <div class="section-header reveal"><div class="section-eyebrow">Share Your Experience</div><h2 class="section-title">Write a Review</h2></div>
+            <div class="write-review reveal"><form id="reviewForm"><div class="form-row"><div class="form-group"><label>Your Name *</label><input type="text" id="reviewName" required></div><div class="form-group"><label>Email *</label><input type="email" id="reviewEmail" required></div></div><div class="form-row"><div class="form-group"><label>Hostel / Program *</label><select id="reviewHostel"><option>Mumbai Hostel</option><option>Vadodara Hostel</option><option>Ahmedabad Hostel</option><option>Pune Hostel</option><option>Bhavnagar Hostel</option><option>Surat Hostel</option><option>Vallabh Vidyanagar Hostel</option><option>Financial Aid Program</option></select></div><div class="form-group"><label>Rating *</label><div class="star-rating" id="starRating"><span data-rating="1">☆</span><span data-rating="2">☆</span><span data-rating="3">☆</span><span data-rating="4">☆</span><span data-rating="5">☆</span></div><input type="hidden" id="ratingValue" value="0"></div></div><div class="form-group"><label>Your Review *</label><textarea id="reviewText" rows="4" required placeholder="Share your experience with SMJV..."></textarea></div><button type="submit" class="btn btn--primary" style="width:100%;">Submit Review →</button></form></div>
+        </div>
+    </section>
+
+        <!-- Footer - Copy this exact code in all pages -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="fb-name">Shri Mahavira Jaina Vidyalaya</span>
+                    <p>Est. June 18, 1915 — Promoting Jain values alongside quality education for over a century.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/smjv" class="social-dot" target="_blank">f</a>
+                        <a href="https://linkedin.com/company/smjv" class="social-dot" target="_blank">in</a>
+                        <a href="https://instagram.com/smjv" class="social-dot" target="_blank">📷</a>
+                        <a href="mailto:headoffice@smjv.org" class="social-dot">✉</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Quick Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="hostel.html">Hostels</a>
+                    <a href="financial-aid.html">Financial Aid</a>
+                    <a href="donation.html">Donate</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Hostel Cities</h5>
+                    <a href="hostel.html?city=mumbai">📍 Mumbai (3 Hostels)</a>
+                    <a href="hostel.html?city=vadodara">📍 Vadodara (2 Hostels)</a>
+                    <a href="hostel.html?city=ahmedabad">📍 Ahmedabad (2 Hostels)</a>
+                    <a href="hostel.html?city=pune">📍 Pune (2 Hostels)</a>
+                    <a href="hostel.html?city=surat">📍 Surat (1 Hostel)</a>
+                    <a href="hostel.html?city=bhavnagar">📍 Bhavnagar (1 Hostel)</a>
+                    <a href="hostel.html?city=vallabh">📍 Vallabh Vidyanagar (2 Hostels)</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <a href="#">Prospectus</a>
+                    <a href="#">Alumni Portal</a>
+                    <a href="#">Annual Report</a>
+                    <a href="reviews.html">Write a Review</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 SMJV. All rights reserved. | FCRA & 80G / 12A Registered</span>
+                <span>headoffice@smjv.org | <a href="#">Privacy</a> | <a href="#">Terms</a></span>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backTop">↑</button>
+
+    <script>
+        const navbar = document.getElementById('navbar'), backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); backTop.classList.toggle('show', window.scrollY > 500); });
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        const ham = document.getElementById('hamburger'), mm = document.getElementById('mobileMenu');
+        ham.addEventListener('click', () => { mm.classList.toggle('open'); const spans = ham.querySelectorAll('span'); if (mm.classList.contains('open')) { spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)'; spans[1].style.opacity = '0'; spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)'; } else { spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; }); } });
+        mm.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mm.classList.remove('open'); document.querySelectorAll('#hamburger span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; }); }); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Star rating
+        const stars = document.querySelectorAll('#starRating span');
+        const ratingInput = document.getElementById('ratingValue');
+        stars.forEach(star => { star.addEventListener('click', () => { const rating = parseInt(star.getAttribute('data-rating')); ratingInput.value = rating; stars.forEach((s, i) => { s.textContent = i < rating ? '★' : '☆'; }); }); });
+
+        document.getElementById('reviewForm')?.addEventListener('submit', (e) => { e.preventDefault(); alert('Thank you for your review! It will be published after moderation.'); e.target.reset(); ratingInput.value = 0; stars.forEach(s => s.textContent = '☆'); });
+    </script>
+</body>
+</html>

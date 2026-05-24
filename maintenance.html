@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance | SMJV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #E8723A;
+            --saffron-deep: #C8551E;
+            --gold: #C9A44B;
+            --brown-deep: #1F1006;
+            --warm-bg: #FFFEFA;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--warm-bg);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .maintenance-card {
+            text-align: center;
+            max-width: 550px;
+            padding: 48px 32px;
+            background: #fff;
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(30,10,2,0.1);
+            margin: 24px;
+        }
+        .icon { font-size: 5rem; margin-bottom: 16px; }
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--brown-deep);
+            margin-bottom: 12px;
+        }
+        p { color: #5C3D2A; margin-bottom: 24px; }
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #E8DDD0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 24px 0;
+        }
+        .progress-fill {
+            width: 65%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            border-radius: 10px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.6; width: 65%; }
+            50% { opacity: 1; width: 75%; }
+            100% { opacity: 0.6; width: 65%; }
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--saffron-deep);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-card">
+        <div class="icon">🔧🕊️</div>
+        <h1>Website Under Maintenance</h1>
+        <p>We are working hard to improve your experience. SMJV website will be back shortly.</p>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+        <p style="font-size:0.8rem;">For urgent inquiries, please contact:<br><strong>📞 022-2625 0376</strong><br><strong>✉️ headoffice@smjv.org</strong></p>
+        <div class="social-links" style="margin-top: 24px;">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+# ==========================================
+# SMJV WEBSITE - .htaccess FILE
+# Shri Mahavira Jaina Vidyalaya
+# ==========================================
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# ==========================================
+# 1. FORCE HTTPS (WWW to Non-WWW)
+# ==========================================
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# ==========================================
+# 2. CUSTOM ERROR PAGES
+# ==========================================
+ErrorDocument 404 /404.html
+ErrorDocument 403 /blocked.html
+ErrorDocument 500 /maintenance.html
+ErrorDocument 503 /maintenance.html
+
+# ==========================================
+# 3. REDIRECT OLD PAGES TO NEW ONES (if any)
+# ==========================================
+# Redirect 301 /old-contact.html /contact.html
+# Redirect 301 /donate.html /donation.html
+
+# ==========================================
+# 4. REMOVE .html EXTENSION FROM URLs
+# ==========================================
+# This makes https://smjv.org/contact work (without .html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# ==========================================
+# 5. BLOCK ACCESS TO SENSITIVE FILES
+# ==========================================
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql|bak|json)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ==========================================
+# 6. BLOCK SPECIFIC IPs (if needed)
+# ==========================================
+# Deny from 192.168.1.100
+# Deny from 10.0.0.0/8
+
+# ==========================================
+# 7. SET CACHE CONTROL (Better Performance)
+# ==========================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# ==========================================
+# 8. COMPRESS FILES (Gzip)
+# ==========================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>
+
+# ==========================================
+# 9. SET DEFAULT PAGE
+# ==========================================
+DirectoryIndex index.html
+
+# ==========================================
+# 10. PREVENT HOTLINKING (other sites using your images)
+# ==========================================
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?smjv.org [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]
