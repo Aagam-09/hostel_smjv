@@ -181,7 +181,7 @@
 
     <section class="hostel-hero">
         <div class="container">
-            <h1 class="reveal">13 Hostels Across 7 Cities</h1>
+            <h1 class="reveal">12 Hostels Across 7 Cities</h1>
             <p class="reveal reveal-delay-1">Safe, affordable, and spiritually nurturing accommodation for Jain students.</p>
         </div>
     </section>
@@ -189,10 +189,10 @@
     <section class="section section--sm">
         <div class="container">
             <div class="filter-bar reveal">
-                <button class="filter-btn active" data-filter="all">All (13)</button>
-                <button class="filter-btn" data-filter="boys">👨 Boys Hostels (8)</button>
+                <button class="filter-btn active" data-filter="all">All (12)</button>
+                <button class="filter-btn" data-filter="boys">👨 Boys Hostels (7)</button>
                 <button class="filter-btn" data-filter="girls">👩 Girls Hostels (5)</button>
-                <button class="filter-btn" data-filter="mumbai">📍 Mumbai (3)</button>
+                <button class="filter-btn" data-filter="mumbai">📍 Mumbai (2)</button>
                 <button class="filter-btn" data-filter="vadodara">📍 Vadodara (2)</button>
                 <button class="filter-btn" data-filter="ahmedabad">📍 Ahmedabad (2)</button>
                 <button class="filter-btn" data-filter="pune">📍 Pune (2)</button>
@@ -203,26 +203,9 @@
 
             <div class="hostels-grid" id="hostelsGrid">
                 
-                <!-- ===== MUMBAI - 3 HOSTELS ===== -->
-                
-                <!-- 1. Mumbai - Boys (Sandhurst Road) -->
-                <div class="hostel-card reveal" data-city="mumbai" data-type="boys" data-key="sandhurst">
-                    <div class="hostel-image" style="background: linear-gradient(135deg, #8B2500, #C8551E);">
-                        <span class="hostel-city-badge">📍 Mumbai</span>
-                        <span class="hostel-type-badge">👨 Boys Hostel</span>
-                    </div>
-                    <div class="hostel-content">
-                        <h3 class="hostel-title">Sandhurst Road Hostel</h3>
-                        <div class="hostel-location">🏛 Near Sandhurst Road Station, Mumbai Central</div>
-                        <div class="rating"><span class="stars">★★★★★</span><span class="rating-value">4.9 (142 reviews)</span></div>
-                        <p>Prime location, spacious rooms, study hall, and on-site Jinalaya. Pure Jain meals twice daily.</p>
-                        <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">📚 Library</span><span class="feature-tag">📖 Study Hall</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">180 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">022-2625 0382</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="sandhurst">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="sandhurst">Details</button></div>
-                    </div>
-                </div>
+                <!-- ===== MUMBAI - 2 HOSTELS ===== -->
 
-                <!-- 2. Mumbai - Boys (Andheri) -->
+                <!-- 1. Mumbai - Boys (Andheri) -->
                 <div class="hostel-card reveal" data-city="mumbai" data-type="boys" data-key="andheri">
                     <div class="hostel-image" style="background: linear-gradient(135deg, #A0522D, #CD853F);">
                         <span class="hostel-city-badge">📍 Mumbai</span>
@@ -239,7 +222,7 @@
                     </div>
                 </div>
 
-                <!-- 3. Mumbai - Girls -->
+                <!-- 2. Mumbai - Girls -->
                 <div class="hostel-card reveal" data-city="mumbai" data-type="girls" data-key="mumbaiGirls">
                     <div class="hostel-image" style="background: linear-gradient(135deg, #B76E79, #D87093);">
                         <span class="hostel-city-badge">📍 Mumbai</span>
@@ -630,16 +613,16 @@
                 <table style="width:100%;margin-bottom:15px;">${h.location ? `<tr><td style="padding:6px 0;color:#5C3D2A;"><strong>📍 Location</strong></td><td>${h.location}</td></tr>` : ''}<tr><td style="padding:6px 0;color:#5C3D2A;"><strong>👥 Capacity</strong></td><td>${h.capacity}</td></tr><tr><td style="padding:6px 0;color:#5C3D2A;"><strong>📞 Contact</strong></td><td><a href="tel:${h.contact}" style="color:#E8723A;">${h.contact}</a></td></tr><tr><td style="padding:6px 0;color:#5C3D2A;"><strong>💰 Fees</strong></td><td>${h.fees}</td></tr></table>
                 <div style="margin-bottom:15px;"><strong>🏠 Features:</strong><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">${h.features.map(f => `<span style="background:#F5ECD7;padding:4px 10px;border-radius:50px;font-size:0.7rem;">${f}</span>`).join('')}</div></div>
                 <p style="font-size:0.8rem;color:#5C3D2A;margin-bottom:15px;">${h.address}</p>
-                <div style="display:flex;gap:12px;"><button onclick="alert('Please contact SMJV office directly for admission.\\n📞 022-2625 0376');this.closest('#detailsModal').remove()" style="flex:1;background:#E8723A;color:#fff;padding:12px;border:none;border-radius:50px;font-weight:600;cursor:pointer;">Apply Now →</button><button onclick="window.location.href='contact.html'" style="flex:1;background:transparent;color:#E8723A;padding:12px;border:2px solid #E8723A;border-radius:50px;font-weight:600;cursor:pointer;">Contact Us</button></div>
+                <div style="display:flex;gap:12px;"><button onclick="window.location.href='form.html'" style="flex:1;background:#E8723A;color:#fff;padding:12px;border:none;border-radius:50px;font-weight:600;cursor:pointer;">Apply Now →</button><button onclick="window.location.href='contact.html'" style="flex:1;background:transparent;color:#E8723A;padding:12px;border:2px solid #E8723A;border-radius:50px;font-weight:600;cursor:pointer;">Contact Us</button></div>
             </div>`;
             document.body.appendChild(modal);
         }
 
-        // Apply button handler
+        // Apply button handler: redirect to application form
         document.querySelectorAll('.apply-btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
-                alert("Please contact SMJV office directly for admission inquiries.\n📞 022-2625 0376\n✉️ admissions@smjv.org");
+                window.location.href = 'form.html';
             });
         });
 
