@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMJV – Contact Us | Shri Mahavira Jaina Vidyalaya</title>
+    <meta name="description" content="Contact SMJV head office in Mumbai, hostel inquiries, financial aid support, donation information. Call 022-2625 0376 or email headoffice@smjv.org">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -459,6 +460,54 @@
             background: var(--saffron-deep);
         }
 
+        /* Hostel Contacts Section - New */
+        .hostel-contacts {
+            background: #fff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-top: 24px;
+        }
+
+        .hostel-contacts h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--brown-deep);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hostel-contact-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .hostel-contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .hostel-name {
+            font-weight: 600;
+            color: var(--brown-deep);
+            font-size: 0.85rem;
+        }
+
+        .hostel-phone {
+            color: var(--saffron-deep);
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+
+        .hostel-phone:hover {
+            text-decoration: underline;
+        }
+
         /* Map Section */
         .map-section {
             background: var(--ivory);
@@ -594,6 +643,7 @@
             .contact-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+            .hostel-contact-item { flex-direction: column; align-items: flex-start; gap: 5px; }
         }
     </style>
 </head>
@@ -657,29 +707,83 @@
                 <div>
                     <div class="info-card reveal">
                         <div class="info-icon">📞</div>
-                        <h3>Phone Numbers</h3>
-                        <p><strong>Head Office:</strong> 022-2625 0376 / 0381</p>
-                        <p><strong>Mumbai Hostel (Sandhurst Road):</strong> 022-2625 0382</p>
-                        <p><strong>Mumbai Hostel (Andheri):</strong> 022-2625 0383</p>
-                        <p><strong>Vadodara Hostel:</strong> 0265-242 1234</p>
+                        <h3>Head Office</h3>
+                        <p><strong>Phone:</strong> 022-2625 0376 / 0381</p>
+                        <p><strong>Fax:</strong> 022-2625 0380</p>
+                        <p><strong>Email:</strong> <a href="mailto:headoffice@smjv.org">headoffice@smjv.org</a></p>
+                        <p><strong>Working Hours:</strong> Mon–Sat, 10:00 AM – 6:30 PM</p>
                     </div>
 
                     <div class="info-card reveal reveal-delay-1">
+                        <div class="info-icon">🏠</div>
+                        <h3>Hostel Contacts</h3>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Mumbai - Sandhurst Road</span>
+                            <a href="tel:02235214024" class="hostel-phone">022-3521 4024</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Mumbai - Andheri</span>
+                            <a href="tel:02226250383" class="hostel-phone">022-2625 0383</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Vadodara - Karelibaug</span>
+                            <a href="tel:02652421234" class="hostel-phone">0265-242 1234</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Vadodara - Girls</span>
+                            <a href="tel:02652425678" class="hostel-phone">0265-242 5678</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Ahmedabad - Shahibaug</span>
+                            <a href="tel:07922881234" class="hostel-phone">079-2288 1234</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Ahmedabad - Naranpura</span>
+                            <a href="tel:07922885678" class="hostel-phone">079-2288 5678</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Pune - BMCC / Agarkar Road</span>
+                            <a href="tel:02025651226" class="hostel-phone">020-2565 1226</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Pune - Girls Hostel</span>
+                            <a href="tel:02025505678" class="hostel-phone">020-2550 5678</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Vallabh Vidyanagar - Boys</span>
+                            <a href="tel:02692230211" class="hostel-phone">02692-230211</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Vallabh Vidyanagar - Girls</span>
+                            <a href="tel:02692232455" class="hostel-phone">02692-232455</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Bhavnagar - Boys</span>
+                            <a href="tel:02782563969" class="hostel-phone">0278-256 3969</a>
+                        </div>
+                        <div class="hostel-contact-item">
+                            <span class="hostel-name">🏛 Surat - Girls Hostel</span>
+                            <a href="tel:02612461234" class="hostel-phone">0261-246 1234</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card reveal reveal-delay-2">
                         <div class="info-icon">✉️</div>
                         <h3>Email Addresses</h3>
                         <a href="mailto:headoffice@smjv.org">📧 headoffice@smjv.org</a>
                         <a href="mailto:admissions@smjv.org">📧 admissions@smjv.org</a>
                         <a href="mailto:donations@smjv.org">📧 donations@smjv.org</a>
                         <a href="mailto:alumni@smjv.org">📧 alumni@smjv.org</a>
+                        <a href="mailto:accounts@smjv.org">📧 accounts@smjv.org</a>
                     </div>
 
-                    <div class="office-address reveal reveal-delay-2">
+                    <div class="office-address reveal reveal-delay-3">
                         <h3>🏛 Head Office Address</h3>
                         <p>Shri Mahavira Jaina Vidyalaya Trust<br>
                         Sandhurst Road, opp. Police Commissioner Office,<br>
-                        Near Sandhurst Road Station,<br>
+                        Near Sandhurst Road Station (Western Line),<br>
                         Mumbai – 400 007, Maharashtra, India</p>
-                        <p style="margin-top: 12px;"><strong>📍 Landmark:</strong> Near Sandhurst Road Railway Station (Western Line)</p>
+                        <p style="margin-top: 12px;"><strong>📍 Landmark:</strong> Opposite Police Commissioner Office, Near Sandhurst Road Railway Station</p>
                     </div>
                 </div>
 
@@ -751,12 +855,12 @@
                 <h2 class="section-title">Our Location</h2>
             </div>
             <div class="map-container reveal">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.2419!2d72.8245!3d18.9734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf5e8cfeabf5%3A0xf6c5bf2b5b7e1c3!2sSandhurst%20Road%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.987654321!2d72.8250!3d18.9730!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf5e8cfeabf5%3A0xf6c5bf2b5b7e1c3!2sSandhurst%20Road%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
-        <!-- Footer - Copy this exact code in all pages -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -781,13 +885,13 @@
                 </div>
                 <div class="footer-col">
                     <h5>Hostel Cities</h5>
-                    <a href="hostel.html?city=mumbai">📍 Mumbai (3 Hostels)</a>
-                    <a href="hostel.html?city=vadodara">📍 Vadodara (2 Hostels)</a>
-                    <a href="hostel.html?city=ahmedabad">📍 Ahmedabad (2 Hostels)</a>
-                    <a href="hostel.html?city=pune">📍 Pune (2 Hostels)</a>
-                    <a href="hostel.html?city=surat">📍 Surat (1 Hostel)</a>
-                    <a href="hostel.html?city=bhavnagar">📍 Bhavnagar (1 Hostel)</a>
-                    <a href="hostel.html?city=vallabh">📍 Vallabh Vidyanagar (2 Hostels)</a>
+                    <a href="hostel.html?city=mumbai">📍 Mumbai</a>
+                    <a href="hostel.html?city=vadodara">📍 Vadodara</a>
+                    <a href="hostel.html?city=ahmedabad">📍 Ahmedabad</a>
+                    <a href="hostel.html?city=pune">📍 Pune</a>
+                    <a href="hostel.html?city=vallabh">📍 Vallabh Vidyanagar</a>
+                    <a href="hostel.html?city=bhavnagar">📍 Bhavnagar</a>
+                    <a href="hostel.html?city=surat">📍 Surat</a>
                 </div>
                 <div class="footer-col">
                     <h5>Resources</h5>

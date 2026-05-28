@@ -3,126 +3,534 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMJV – 13 Hostels | Shri Mahavira Jaina Vidyalaya</title>
-    <meta name="description" content="SMJV hostels across 7 cities - Mumbai, Vadodara, Ahmedabad, Pune, Surat, Bhavnagar, Vallabh Vidyanagar. Jain meals, Jinalaya, affordable fees.">
+    <title>SMJV – 12 Hostels | Shri Mahavira Jaina Vidyalaya</title>
+    <meta name="description" content="SMJV official hostels across 7 cities - Mumbai, Vadodara, Ahmedabad, Pune, Vallabh Vidyanagar, Bhavnagar, Surat. Jain meals, Jinalaya, affordable fees.">
+    <meta name="keywords" content="SMJV Hostel, Jain Hostel Mumbai, Jain Hostel Vadodara, Boys Hostel, Girls Hostel, Vallabh Vidyanagar Hostel">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* ====== GLOBAL STYLES ====== */
-        :root {
-            --saffron: #E8723A;
-            --saffron-deep: #C8551E;
-            --gold: #C9A44B;
-            --gold-light: #E0C87A;
-            --gold-pale: #F5ECD7;
-            --cream: #FDF9F2;
-            --ivory: #F7F1E4;
-            --warm-bg: #FFFEFA;
-            --brown-deep: #1F1006;
-            --text-primary: #1A0D04;
-            --text-secondary: #5C3D2A;
-            --text-muted: #8B6F58;
-            --border-subtle: #E8DDD0;
-            --border-light: #F0E8DB;
-            --white: #FFFFFF;
-            --shadow-sm: 0 1px 3px rgba(30,10,2,0.04);
-            --shadow-md: 0 4px 16px rgba(30,10,2,0.06);
-            --shadow-lg: 0 12px 40px rgba(30,10,2,0.10);
-            --shadow-xl: 0 20px 60px rgba(30,10,2,0.14);
-            --radius-sm: 10px;
-            --radius-md: 16px;
-            --radius-lg: 22px;
-            --radius-xl: 28px;
-            --radius-full: 9999px;
-            --transition-fast: 0.18s cubic-bezier(0.4,0,0.2,1);
-            --transition-smooth: 0.3s cubic-bezier(0.4,0,0.2,1);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--warm-bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        .section { padding: 80px 0; }
-        .section--sm { padding: 56px 0; }
-        .section-header { text-align: center; margin-bottom: 48px; }
-        .section-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--saffron-deep); margin-bottom: 10px; background: rgba(232,114,58,0.07); padding: 6px 14px; border-radius: var(--radius-full); }
-        .section-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--saffron); }
-        .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,4vw,2.8rem); font-weight: 700; color: var(--brown-deep); }
-        .btn { display: inline-flex; align-items: center; gap: 7px; padding: 12px 26px; border-radius: var(--radius-full); font-weight: 600; font-size: 0.84rem; text-decoration: none; transition: all var(--transition-smooth); cursor: pointer; border: none; }
-        .btn--primary { background: var(--saffron); color: #fff; }
-        .btn--primary:hover { background: var(--saffron-deep); transform: translateY(-2px); }
-        .btn--outline { background: transparent; color: var(--saffron-deep); border: 2px solid var(--saffron-deep); }
-        .btn--outline:hover { background: var(--saffron-deep); color: #fff; }
-        .btn--sm { padding: 9px 18px; font-size: 0.78rem; }
-        /* Topbar & Navbar */
-        .topbar { background: var(--brown-deep); color: rgba(255,255,255,0.7); font-size: 0.7rem; padding: 7px 0; }
-        .topbar .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-        .topbar a { color: var(--gold-light); text-decoration: none; }
-        .navbar { position: sticky; top: 0; z-index: 1000; background: rgba(255,254,250,0.92); backdrop-filter: blur(18px); border-bottom: 1px solid transparent; transition: all var(--transition-smooth); }
-        .navbar.scrolled { border-bottom-color: var(--border-subtle); box-shadow: var(--shadow-md); }
-        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-        .logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--saffron-deep), var(--saffron)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fff; }
-        .logo-text strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--brown-deep); }
-        .logo-text span { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; }
-        .nav-links { display: flex; gap: 2px; list-style: none; }
-        .nav-links li a { padding: 8px 14px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: all var(--transition-fast); }
-        .nav-links li a:hover, .nav-links li a.active { color: var(--saffron-deep); background: rgba(232,114,58,0.06); }
-        .nav-actions { display: flex; gap: 10px; }
-        .hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; }
-        .hamburger span { width: 22px; height: 2.5px; background: var(--brown-deep); border-radius: 3px; }
-        .mobile-menu { display: none; position: fixed; inset: 0; top: 64px; background: rgba(255,254,250,0.98); backdrop-filter: blur(20px); z-index: 900; padding: 20px; flex-direction: column; }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { padding: 14px 18px; border-radius: var(--radius-sm); font-size: 0.92rem; color: var(--text-primary); text-decoration: none; font-weight: 500; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FFFEFA;
+            color: #1A0D04;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section--sm {
+            padding: 56px 0;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: #C8551E;
+            margin-bottom: 10px;
+            background: rgba(232, 114, 58, 0.07);
+            padding: 6px 14px;
+            border-radius: 9999px;
+        }
+        .section-eyebrow::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #E8723A;
+        }
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: #1F1006;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 12px 26px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.84rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn--primary {
+            background: #E8723A;
+            color: #fff;
+        }
+        .btn--primary:hover {
+            background: #C8551E;
+            transform: translateY(-2px);
+        }
+        .btn--outline {
+            background: transparent;
+            color: #C8551E;
+            border: 2px solid #C8551E;
+        }
+        .btn--outline:hover {
+            background: #C8551E;
+            color: #fff;
+        }
+        .btn--sm {
+            padding: 9px 18px;
+            font-size: 0.78rem;
+        }
+        .topbar {
+            background: #1F1006;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.7rem;
+            padding: 7px 0;
+        }
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .topbar a {
+            color: #E0C87A;
+            text-decoration: none;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 254, 250, 0.92);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            border-bottom-color: #E8DDD0;
+            box-shadow: 0 4px 16px rgba(30, 10, 2, 0.06);
+        }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #C8551E, #E8723A);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+        .logo-text strong {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            color: #1F1006;
+        }
+        .logo-text span {
+            font-size: 0.6rem;
+            color: #8B6F58;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2px;
+            list-style: none;
+        }
+        .nav-links li a {
+            padding: 8px 14px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #5C3D2A;
+            text-decoration: none;
+            transition: all 0.18s ease;
+        }
+        .nav-links li a:hover, .nav-links li a.active {
+            color: #C8551E;
+            background: rgba(232, 114, 58, 0.06);
+        }
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .hamburger span {
+            width: 22px;
+            height: 2.5px;
+            background: #1F1006;
+            border-radius: 3px;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            top: 64px;
+            background: rgba(255, 254, 250, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 900;
+            padding: 20px;
+            flex-direction: column;
+        }
+        .mobile-menu.open {
+            display: flex;
+        }
+        .mobile-menu a {
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 0.92rem;
+            color: #1A0D04;
+            text-decoration: none;
+            font-weight: 500;
+        }
         /* Hostel Hero */
-        .hostel-hero { background: linear-gradient(135deg, #1F1006 0%, #2A1608 100%); padding: 80px 0; text-align: center; }
-        .hostel-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem,5vw,3.5rem); color: #fff; margin-bottom: 16px; }
-        .hostel-hero p { color: rgba(255,255,255,0.6); max-width: 680px; margin: 0 auto; }
+        .hostel-hero {
+            background: linear-gradient(135deg, #1F1006 0%, #2A1608 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hostel-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .hostel-hero p {
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 680px;
+            margin: 0 auto;
+        }
         /* Filter Buttons */
-        .filter-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 48px; }
-        .filter-btn { background: transparent; border: 1.5px solid var(--border-subtle); padding: 8px 18px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 500; color: var(--text-secondary); cursor: pointer; transition: all var(--transition-fast); }
-        .filter-btn.active, .filter-btn:hover { background: var(--saffron); border-color: var(--saffron); color: #fff; }
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 48px;
+        }
+        .filter-btn {
+            background: transparent;
+            border: 1.5px solid #E8DDD0;
+            padding: 8px 18px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #5C3D2A;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: #E8723A;
+            border-color: #E8723A;
+            color: #fff;
+        }
         /* Hostels Grid */
-        .hostels-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
-        .hostel-card { background: #fff; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-smooth); }
-        .hostel-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); }
-        .hostel-image { height: 180px; position: relative; display: flex; align-items: flex-end; padding: 20px; }
-        .hostel-city-badge { position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); color: #fff; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.7rem; font-weight: 600; }
-        .hostel-type-badge { position: absolute; bottom: 16px; left: 16px; background: var(--saffron); color: #fff; padding: 4px 14px; border-radius: var(--radius-full); font-size: 0.7rem; font-weight: 600; }
-        .hostel-content { padding: 24px; }
-        .hostel-title { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: var(--brown-deep); margin-bottom: 6px; }
-        .hostel-location { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
-        .rating { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; }
-        .stars { color: #f5b042; font-size: 0.8rem; letter-spacing: 2px; }
-        .rating-value { font-weight: 600; color: var(--brown-med); }
-        .hostel-features { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
-        .feature-tag { background: var(--gold-pale); padding: 4px 10px; border-radius: var(--radius-full); font-size: 0.7rem; color: var(--brown-med); }
-        .hostel-meta-row { display: flex; justify-content: space-between; margin: 16px 0; padding: 12px 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
-        .meta-item { text-align: center; }
-        .meta-label { font-size: 0.65rem; color: var(--text-muted); }
-        .meta-value { font-weight: 700; color: var(--saffron-deep); }
-        .card-actions { display: flex; gap: 12px; margin-top: 16px; }
+        .hostels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 32px;
+        }
+        .hostel-card {
+            background: #fff;
+            border: 1px solid #E8DDD0;
+            border-radius: 22px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .hostel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(30, 10, 2, 0.14);
+        }
+        .hostel-image {
+            height: 180px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+        .hostel-city-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .hostel-type-badge {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: #E8723A;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .hostel-content {
+            padding: 24px;
+        }
+        .hostel-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1F1006;
+            margin-bottom: 6px;
+        }
+        .hostel-location {
+            font-size: 0.75rem;
+            color: #8B6F58;
+            margin-bottom: 12px;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        .stars {
+            color: #f5b042;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+        .rating-value {
+            font-weight: 600;
+            color: #5C3010;
+        }
+        .hostel-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+        }
+        .feature-tag {
+            background: #F5ECD7;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            color: #5C3010;
+        }
+        .hostel-meta-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 16px 0;
+            padding: 12px 0;
+            border-top: 1px solid #F0E8DB;
+            border-bottom: 1px solid #F0E8DB;
+        }
+        .meta-item {
+            text-align: center;
+        }
+        .meta-label {
+            font-size: 0.65rem;
+            color: #8B6F58;
+        }
+        .meta-value {
+            font-weight: 700;
+            color: #C8551E;
+        }
+        .card-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
         /* Stats Banner */
-        .stats-banner { background: var(--brown-deep); color: #fff; padding: 40px 0; text-align: center; border-radius: var(--radius-lg); margin-top: 48px; }
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .stat-number { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--gold-light); }
+        .stats-banner {
+            background: #1F1006;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 28px;
+            margin-top: 48px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #E0C87A;
+        }
         /* Footer */
-        footer { background: var(--brown-deep); color: rgba(255,255,255,0.55); padding: 56px 0 0; margin-top: 56px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-        .footer-brand .fb-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: #fff; display: block; margin-bottom: 8px; }
-        .footer-brand p { font-size: 0.78rem; max-width: 260px; }
-        .footer-social { display: flex; gap: 8px; margin-top: 16px; }
-        .social-dot { width: 36px; height: 36px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: rgba(255,255,255,0.5); transition: all 0.2s; }
-        .social-dot:hover { background: var(--saffron-deep); color: #fff; transform: translateY(-2px); }
-        .footer-col h5 { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; color: var(--gold-light); margin-bottom: 14px; letter-spacing: 0.1em; }
-        .footer-col a { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.45); text-decoration: none; padding: 5px 0; transition: color 0.2s; }
-        .footer-col a:hover { color: #fff; }
-        .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 18px 0; font-size: 0.7rem; }
-        .footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; }
-        .footer-bottom a:hover { color: #fff; }
-        .back-to-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: var(--saffron-deep); color: #fff; border-radius: 50%; border: none; cursor: pointer; opacity: 0; transition: all var(--transition-smooth); }
-        .back-to-top.show { opacity: 1; }
-        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            background: #1F1006;
+            color: rgba(255, 255, 255, 0.55);
+            padding: 56px 0 0;
+            margin-top: 56px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .footer-brand .fb-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .footer-brand p {
+            font-size: 0.78rem;
+            max-width: 260px;
+        }
+        .footer-social {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .social-dot {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.2s;
+        }
+        .social-dot:hover {
+            background: #C8551E;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .footer-col h5 {
+            font-size: 0.66rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #E0C87A;
+            margin-bottom: 14px;
+            letter-spacing: 0.1em;
+        }
+        .footer-col a {
+            display: block;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+            padding: 5px 0;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 18px 0;
+            font-size: 0.7rem;
+        }
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+        }
+        .footer-bottom a:hover {
+            color: #fff;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 44px;
+            height: 44px;
+            background: #C8551E;
+            color: #fff;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .back-to-top.show {
+            opacity: 1;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Room Details Table Style */
+        .room-details-table {
+            width: 100%;
+            margin: 15px 0;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+        }
+        .room-details-table td {
+            padding: 8px 6px;
+            border-bottom: 1px solid #F0E8DB;
+        }
+        .room-details-table td:first-child {
+            font-weight: 600;
+            color: #5C3D2A;
+            width: 40%;
+        }
+        .room-details-table td:last-child {
+            color: #1F1006;
+        }
+        .section-title-sm {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1F1006;
+            margin: 12px 0 8px;
+            border-left: 3px solid #E8723A;
+            padding-left: 10px;
+        }
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hamburger { display: flex; }
@@ -173,16 +581,13 @@
         <a href="reviews.html">Reviews</a>
         <a href="news.html">News</a>
         <a href="contact.html">Contact</a>
-        <div class="mobile-cta">    
-            <a href="form.html" class="btn btn--primary" style="display:block;text-align:center;">Apply Now</a>
-            <a href="donation.html" class="btn btn--gold" style="display:block;text-align:center;margin-top:8px;">Donate</a>
-        </div>
+        <div><a href="donation.html" class="btn btn--primary" style="display:block;text-align:center;">Donate</a></div>
     </div>
 
     <section class="hostel-hero">
         <div class="container">
             <h1 class="reveal">12 Hostels Across 7 Cities</h1>
-            <p class="reveal reveal-delay-1">Safe, affordable, and spiritually nurturing accommodation for Jain students.</p>
+            <p class="reveal reveal-delay-1">Safe, affordable, and spiritually nurturing accommodation for Jain students. Pure Jain meals, Jinalaya/Deraser on-site, and 24/7 support.</p>
         </div>
     </section>
 
@@ -192,56 +597,56 @@
                 <button class="filter-btn active" data-filter="all">All (12)</button>
                 <button class="filter-btn" data-filter="boys">👨 Boys Hostels (7)</button>
                 <button class="filter-btn" data-filter="girls">👩 Girls Hostels (5)</button>
-                <button class="filter-btn" data-filter="mumbai">📍 Mumbai (2)</button>
-                <button class="filter-btn" data-filter="vadodara">📍 Vadodara (2)</button>
-                <button class="filter-btn" data-filter="ahmedabad">📍 Ahmedabad (2)</button>
-                <button class="filter-btn" data-filter="pune">📍 Pune (2)</button>
-                <button class="filter-btn" data-filter="surat">📍 Surat (1)</button>
-                <button class="filter-btn" data-filter="bhavnagar">📍 Bhavnagar (1)</button>
-                <button class="filter-btn" data-filter="vallabh">📍 Vallabh Vidyanagar (2)</button>
+                <button class="filter-btn" data-filter="mumbai">📍 Mumbai</button>
+                <button class="filter-btn" data-filter="vadodara">📍 Vadodara</button>
+                <button class="filter-btn" data-filter="ahmedabad">📍 Ahmedabad</button>
+                <button class="filter-btn" data-filter="pune">📍 Pune</button>
+                <button class="filter-btn" data-filter="vallabh">📍 Vallabh Vidyanagar</button>
+                <button class="filter-btn" data-filter="bhavnagar">📍 Bhavnagar</button>
+                <button class="filter-btn" data-filter="surat">📍 Surat</button>
             </div>
 
             <div class="hostels-grid" id="hostelsGrid">
                 
                 <!-- ===== MUMBAI - 2 HOSTELS ===== -->
+                
+                <!-- 1. Mumbai - Sandhurst Road Boys -->
+                <div class="hostel-card reveal" data-city="mumbai" data-type="boys" data-key="sandhurst">
+                    <div class="hostel-image" style="background: linear-gradient(135deg, #8B2500, #C8551E);">
+                        <span class="hostel-city-badge">📍 Mumbai</span>
+                        <span class="hostel-type-badge">👨 Boys Hostel</span>
+                    </div>
+                    <div class="hostel-content">
+                        <h3 class="hostel-title">Sandhurst Road Boys Hostel</h3>
+                        <div class="hostel-location">🏛 Sandhurst Road, Mumbai Central</div>
+                        <div class="rating"><span class="stars">★★★★★</span><span class="rating-value">4.9 (142 reviews)</span></div>
+                        <p>Prime location hostel with Jinalaya, library, study hall, and pure Jain meals twice daily.</p>
+                        <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">📚 Library</span><span class="feature-tag">📖 Study Hall</span></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹88,000 - ₹95,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">022-3521 4024</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="sandhurst">Details</button></div>
+                    </div>
+                </div>
 
-                <!-- 1. Mumbai - Boys (Andheri) -->
+                <!-- 2. Mumbai - Andheri Boys -->
                 <div class="hostel-card reveal" data-city="mumbai" data-type="boys" data-key="andheri">
                     <div class="hostel-image" style="background: linear-gradient(135deg, #A0522D, #CD853F);">
                         <span class="hostel-city-badge">📍 Mumbai</span>
                         <span class="hostel-type-badge">👨 Boys Hostel</span>
                     </div>
                     <div class="hostel-content">
-                        <h3 class="hostel-title">Andheri (West) Hostel</h3>
-                        <div class="hostel-location">🏛 Near Andheri Station, Mumbai West</div>
+                        <h3 class="hostel-title">Andheri Boys Hostel</h3>
+                        <div class="hostel-location">🏛 Andheri (West), Mumbai</div>
                         <div class="rating"><span class="stars">★★★★★</span><span class="rating-value">4.8 (98 reviews)</span></div>
                         <p>Modern facilities, well-ventilated rooms, attached Jinalaya. Close to colleges and station.</p>
                         <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">🏸 Games</span><span class="feature-tag">📶 Wi-Fi</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">120 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">022-2625 0383</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="andheri">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="andheri">Details</button></div>
-                    </div>
-                </div>
-
-                <!-- 2. Mumbai - Girls -->
-                <div class="hostel-card reveal" data-city="mumbai" data-type="girls" data-key="mumbaiGirls">
-                    <div class="hostel-image" style="background: linear-gradient(135deg, #B76E79, #D87093);">
-                        <span class="hostel-city-badge">📍 Mumbai</span>
-                        <span class="hostel-type-badge">👩 Girls Hostel</span>
-                    </div>
-                    <div class="hostel-content">
-                        <h3 class="hostel-title">Mumbai Girls Hostel</h3>
-                        <div class="hostel-location">🏛 Near Matunga, Mumbai</div>
-                        <div class="rating"><span class="stars">★★★★★</span><span class="rating-value">4.9 (112 reviews)</span></div>
-                        <p>Safe, secure with 24/7 female wardens, CCTV surveillance, and Jinalaya.</p>
-                        <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">👩 Female Warden</span><span class="feature-tag">📹 CCTV</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">100 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">022-2625 0384</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="mumbaiGirls">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="mumbaiGirls">Details</button></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹88,000 - ₹95,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">022-2625 0383</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="andheri">Details</button></div>
                     </div>
                 </div>
 
                 <!-- ===== VADODARA - 2 HOSTELS ===== -->
                 
-                <!-- 4. Vadodara - Boys -->
+                <!-- 3. Vadodara - Boys -->
                 <div class="hostel-card reveal" data-city="vadodara" data-type="boys" data-key="vadodaraBoys">
                     <div class="hostel-image" style="background: linear-gradient(135deg, #5A2D0C, #8B4513);">
                         <span class="hostel-city-badge">📍 Vadodara</span>
@@ -253,31 +658,31 @@
                         <div class="rating"><span class="stars">★★★★★</span><span class="rating-value">4.7 (86 reviews)</span></div>
                         <p>Spacious campus, large study halls, sports ground. Pure Jain meals.</p>
                         <div class="hostel-features"><span class="feature-tag">🕌 Derasar</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">⚽ Sports</span><span class="feature-tag">🏋️ Gym</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">150 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">0265-242 1234</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="vadodaraBoys">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="vadodaraBoys">Details</button></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹70,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">0265-242 1234</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="vadodaraBoys">Details</button></div>
                     </div>
                 </div>
 
-                <!-- 5. Vadodara - Girls -->
+                <!-- 4. Vadodara - Girls -->
                 <div class="hostel-card reveal" data-city="vadodara" data-type="girls" data-key="vadodaraGirls">
                     <div class="hostel-image" style="background: linear-gradient(135deg, #B76E79, #CD5C5C);">
                         <span class="hostel-city-badge">📍 Vadodara</span>
                         <span class="hostel-type-badge">👩 Girls Hostel</span>
                     </div>
                     <div class="hostel-content">
-                        <h3 class="hostel-title">Vadodara Girls Hostel</h3>
-                        <div class="hostel-location">🏛 Near Polytechnic, Vadodara</div>
+                        <h3 class="hostel-title">Hiraba Kanya Chhatralaya (Girls Hostel)</h3>
+                        <div class="hostel-location">🏛 Vadodara</div>
                         <div class="rating"><span class="stars">★★★★★</span><span class="rating-value">4.8 (98 reviews)</span></div>
                         <p>Safe environment, female wardens, attached Jinalaya. Nutritious Jain meals.</p>
                         <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">👩 Female Warden</span><span class="feature-tag">🌳 Garden</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">80 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">0265-242 5678</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="vadodaraGirls">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="vadodaraGirls">Details</button></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹50,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">0265-242 5678</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="vadodaraGirls">Details</button></div>
                     </div>
                 </div>
 
                 <!-- ===== AHMEDABAD - 2 HOSTELS ===== -->
                 
-                <!-- 6. Ahmedabad - Boys -->
+                <!-- 5. Ahmedabad - Boys -->
                 <div class="hostel-card reveal" data-city="ahmedabad" data-type="boys" data-key="ahmedabadBoys">
                     <div class="hostel-image" style="background: linear-gradient(135deg, #1A4A1A, #2E7D32);">
                         <span class="hostel-city-badge">📍 Ahmedabad</span>
@@ -289,12 +694,12 @@
                         <div class="rating"><span class="stars">★★★★☆</span><span class="rating-value">4.6 (74 reviews)</span></div>
                         <p>Strict Jain dietary compliance, daily pathshala. Meals strictly before sunset.</p>
                         <div class="hostel-features"><span class="feature-tag">🕌 Derasar</span><span class="feature-tag">🍽 Pure Jain</span><span class="feature-tag">📚 Pathshala</span><span class="feature-tag">📖 Study Room</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">100 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">079-2288 1234</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="ahmedabadBoys">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="ahmedabadBoys">Details</button></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹88,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">079-2288 1234</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="ahmedabadBoys">Details</button></div>
                     </div>
                 </div>
 
-                <!-- 7. Ahmedabad - Girls -->
+                <!-- 6. Ahmedabad - Girls -->
                 <div class="hostel-card reveal" data-city="ahmedabad" data-type="girls" data-key="ahmedabadGirls">
                     <div class="hostel-image" style="background: linear-gradient(135deg, #B76E79, #D87093);">
                         <span class="hostel-city-badge">📍 Ahmedabad</span>
@@ -306,31 +711,31 @@
                         <div class="rating"><span class="stars">★★★★★</span><span class="rating-value">4.8 (65 reviews)</span></div>
                         <p>Modern hostel with CCTV, female wardens, and Jinalaya.</p>
                         <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">👩 Female Warden</span><span class="feature-tag">📹 CCTV</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">70 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">079-2288 5678</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="ahmedabadGirls">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="ahmedabadGirls">Details</button></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹50,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">079-2288 5678</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="ahmedabadGirls">Details</button></div>
                     </div>
                 </div>
 
                 <!-- ===== PUNE - 2 HOSTELS ===== -->
                 
-                <!-- 8. Pune - Boys -->
+                <!-- 7. Pune - Boys -->
                 <div class="hostel-card reveal" data-city="pune" data-type="boys" data-key="puneBoys">
                     <div class="hostel-image" style="background: linear-gradient(135deg, #2c3e50, #3498db);">
                         <span class="hostel-city-badge">📍 Pune</span>
                         <span class="hostel-type-badge">👨 Boys Hostel</span>
                     </div>
                     <div class="hostel-content">
-                        <h3 class="hostel-title">Pune Boys Hostel</h3>
-                        <div class="hostel-location">🏛 Near Pune Station, Pune</div>
+                        <h3 class="hostel-title">Agarkar Road / BMCC Boys Hostel</h3>
+                        <div class="hostel-location">🏛 Agarkar Road, Near BMCC College, Pune</div>
                         <div class="rating"><span class="stars">★★★★☆</span><span class="rating-value">4.7 (52 reviews)</span></div>
                         <p>Well-maintained, close to colleges, pure Jain meals. Study room available.</p>
                         <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">📖 Study Room</span><span class="feature-tag">📶 Wi-Fi</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">90 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">020-2550 1234</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="puneBoys">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="puneBoys">Details</button></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹95,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">020-2565 1226</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="puneBoys">Details</button></div>
                     </div>
                 </div>
 
-                <!-- 9. Pune - Girls -->
+                <!-- 8. Pune - Girls -->
                 <div class="hostel-card reveal" data-city="pune" data-type="girls" data-key="puneGirls">
                     <div class="hostel-image" style="background: linear-gradient(135deg, #c44569, #e66767);">
                         <span class="hostel-city-badge">📍 Pune</span>
@@ -342,27 +747,44 @@
                         <div class="rating"><span class="stars">★★★★☆</span><span class="rating-value">4.6 (48 reviews)</span></div>
                         <p>Safe, secure, female wardens, Jain meals. Close to major colleges.</p>
                         <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">👩 Female Warden</span><span class="feature-tag">📚 Library</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">60 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">020-2550 5678</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="puneGirls">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="puneGirls">Details</button></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹50,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">020-2550 5678</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="puneGirls">Details</button></div>
                     </div>
                 </div>
 
-                <!-- ===== SURAT - 1 HOSTEL ===== -->
+                <!-- ===== VALLABH VIDYANAGAR - 2 HOSTELS ===== -->
                 
-                <!-- 10. Surat - Girls -->
-                <div class="hostel-card reveal" data-city="surat" data-type="girls" data-key="suratGirls">
-                    <div class="hostel-image" style="background: linear-gradient(135deg, #d35400, #e67e22);">
-                        <span class="hostel-city-badge">📍 Surat</span>
+                <!-- 9. Vallabh Vidyanagar - Boys -->
+                <div class="hostel-card reveal" data-city="vallabh" data-type="boys" data-key="vallabhBoys">
+                    <div class="hostel-image" style="background: linear-gradient(135deg, #2c3e50, #16a085);">
+                        <span class="hostel-city-badge">📍 Vallabh Vidyanagar</span>
+                        <span class="hostel-type-badge">👨 Boys Hostel</span>
+                    </div>
+                    <div class="hostel-content">
+                        <h3 class="hostel-title">Laherchand Uttamchand Vidyarthi Gruh (Boys Hostel)</h3>
+                        <div class="hostel-location">🏛 Near Nagar Palika, Nana Bazar, Vallabh Vidyanagar, Anand</div>
+                        <div class="rating"><span class="stars">★★★★☆</span><span class="rating-value">4.7 (56 reviews)</span></div>
+                        <p>Ideal for college students, pure Jain meals. Library and AC reading room available.</p>
+                        <div class="hostel-features"><span class="feature-tag">🕌 Deraser</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">📚 Library</span><span class="feature-tag">❄️ AC Reading Room</span></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹60,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">02692-230211</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="vallabhBoys">Details</button></div>
+                    </div>
+                </div>
+
+                <!-- 10. Vallabh Vidyanagar - Girls -->
+                <div class="hostel-card reveal" data-city="vallabh" data-type="girls" data-key="vallabhGirls">
+                    <div class="hostel-image" style="background: linear-gradient(135deg, #c44569, #e84393);">
+                        <span class="hostel-city-badge">📍 Vallabh Vidyanagar</span>
                         <span class="hostel-type-badge">👩 Girls Hostel</span>
                     </div>
                     <div class="hostel-content">
-                        <h3 class="hostel-title">Surat Girls Hostel</h3>
-                        <div class="hostel-location">🏛 Near Varachha Road, Surat</div>
-                        <div class="rating"><span class="stars">★★★★☆</span><span class="rating-value">4.6 (42 reviews)</span></div>
-                        <p>Safe, modern hostel with female wardens, Jinalaya, and CCTV surveillance.</p>
-                        <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">👩 Female Warden</span><span class="feature-tag">📹 CCTV</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">75 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">0261-246 1234</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="suratGirls">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="suratGirls">Details</button></div>
+                        <h3 class="hostel-title">Naliniben Pravinchandra Changani Kanya Chhatralaya (Girls Hostel)</h3>
+                        <div class="hostel-location">🏛 Vallabh Vidyanagar, Anand</div>
+                        <div class="rating"><span class="stars">★★★★★</span><span class="rating-value">4.8 (44 reviews)</span></div>
+                        <p>Safe, female wardens, Jinalaya, nutritious Jain meals. Library available.</p>
+                        <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">👩 Female Warden</span><span class="feature-tag">📚 Library</span></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹50,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">02692-232455</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="vallabhGirls">Details</button></div>
                     </div>
                 </div>
 
@@ -375,49 +797,32 @@
                         <span class="hostel-type-badge">👨 Boys Hostel</span>
                     </div>
                     <div class="hostel-content">
-                        <h3 class="hostel-title">Bhavnagar Boys Hostel</h3>
+                        <h3 class="hostel-title">Manilal Durlabhji Boys Hostel</h3>
                         <div class="hostel-location">🏛 Near Ghogha Circle, Bhavnagar</div>
                         <div class="rating"><span class="stars">★★★★☆</span><span class="rating-value">4.5 (38 reviews)</span></div>
                         <p>Peaceful environment, pure Jain meals, Deraser nearby. Garden area.</p>
                         <div class="hostel-features"><span class="feature-tag">🕌 Deraser</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">🌳 Garden</span><span class="feature-tag">📖 Study Room</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">80 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">0278-251 1234</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="bhavnagarBoys">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="bhavnagarBoys">Details</button></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹45,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">0278-256 3969</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="bhavnagarBoys">Details</button></div>
                     </div>
                 </div>
 
-                <!-- ===== VALLABH VIDYANAGAR - 2 HOSTELS ===== -->
+                <!-- ===== SURAT - 1 HOSTEL ===== -->
                 
-                <!-- 12. Vallabh Vidyanagar - Boys -->
-                <div class="hostel-card reveal" data-city="vallabh" data-type="boys" data-key="vallabhBoys">
-                    <div class="hostel-image" style="background: linear-gradient(135deg, #2c3e50, #16a085);">
-                        <span class="hostel-city-badge">📍 Vallabh Vidyanagar</span>
-                        <span class="hostel-type-badge">👨 Boys Hostel</span>
-                    </div>
-                    <div class="hostel-content">
-                        <h3 class="hostel-title">V.V. Nagar Boys Hostel</h3>
-                        <div class="hostel-location">🏛 Near Charutar Vidya Mandal, Anand</div>
-                        <div class="rating"><span class="stars">★★★★☆</span><span class="rating-value">4.7 (56 reviews)</span></div>
-                        <p>Ideal for engineering/college students, pure Jain meals. Library available.</p>
-                        <div class="hostel-features"><span class="feature-tag">🕌 Deraser</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">📚 Library</span><span class="feature-tag">📖 Study Hall</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">110 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">02692-231 234</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="vallabhBoys">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="vallabhBoys">Details</button></div>
-                    </div>
-                </div>
-
-                <!-- 13. Vallabh Vidyanagar - Girls -->
-                <div class="hostel-card reveal" data-city="vallabh" data-type="girls" data-key="vallabhGirls">
-                    <div class="hostel-image" style="background: linear-gradient(135deg, #c44569, #e84393);">
-                        <span class="hostel-city-badge">📍 Vallabh Vidyanagar</span>
+                <!-- 12. Surat - Girls -->
+                <div class="hostel-card reveal" data-city="surat" data-type="girls" data-key="suratGirls">
+                    <div class="hostel-image" style="background: linear-gradient(135deg, #d35400, #e67e22);">
+                        <span class="hostel-city-badge">📍 Surat</span>
                         <span class="hostel-type-badge">👩 Girls Hostel</span>
                     </div>
                     <div class="hostel-content">
-                        <h3 class="hostel-title">V.V. Nagar Girls Hostel</h3>
-                        <div class="hostel-location">🏛 Near Charutar Vidya Mandal, Anand</div>
-                        <div class="rating"><span class="stars">★★★★★</span><span class="rating-value">4.8 (44 reviews)</span></div>
-                        <p>Safe, female wardens, Jinalaya, nutritious Jain meals. Library available.</p>
-                        <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">👩 Female Warden</span><span class="feature-tag">📚 Library</span></div>
-                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Capacity</span><div class="meta-value">65 seats</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">02692-231 235</div></div></div>
-                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn" data-key="vallabhGirls">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="vallabhGirls">Details</button></div>
+                        <h3 class="hostel-title">Surat Girls Hostel</h3>
+                        <div class="hostel-location">🏛 Near Varachha Road, Surat</div>
+                        <div class="rating"><span class="stars">★★★★☆</span><span class="rating-value">4.6 (42 reviews)</span></div>
+                        <p>Safe, modern hostel with female wardens, Jinalaya, and CCTV surveillance.</p>
+                        <div class="hostel-features"><span class="feature-tag">🕌 Jinalaya</span><span class="feature-tag">🍽 Jain Meals</span><span class="feature-tag">👩 Female Warden</span><span class="feature-tag">📹 CCTV</span></div>
+                        <div class="hostel-meta-row"><div class="meta-item"><span class="meta-label">Annual Fees</span><div class="meta-value">₹50,000</div></div><div class="meta-item"><span class="meta-label">Contact</span><div class="meta-value">0261-246 1234</div></div></div>
+                        <div class="card-actions"><button class="btn btn--primary btn--sm apply-btn">Apply →</button><button class="btn btn--outline btn--sm details-btn" data-key="suratGirls">Details</button></div>
                     </div>
                 </div>
 
@@ -425,16 +830,16 @@
 
             <div class="stats-banner reveal">
                 <div class="stats-grid">
-                    <div><div class="stat-number">13</div><div>Hostels</div></div>
-                    <div><div class="stat-number">8+5</div><div>Boys | Girls</div></div>
+                    <div><div class="stat-number">12</div><div>Official Hostels</div></div>
+                    <div><div class="stat-number">7+5</div><div>Boys | Girls</div></div>
                     <div><div class="stat-number">7</div><div>Cities</div></div>
-                    <div><div class="stat-number">2,000+</div><div>Seats</div></div>
+                    <div><div class="stat-number">1,500+</div><div>Seats</div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Common Footer for All Pages -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -459,13 +864,13 @@
                 </div>
                 <div class="footer-col">
                     <h5>Hostel Cities</h5>
-                    <a href="hostel.html?city=mumbai">📍 Mumbai (3 Hostels)</a>
-                    <a href="hostel.html?city=vadodara">📍 Vadodara (2 Hostels)</a>
-                    <a href="hostel.html?city=ahmedabad">📍 Ahmedabad (2 Hostels)</a>
-                    <a href="hostel.html?city=pune">📍 Pune (2 Hostels)</a>
-                    <a href="hostel.html?city=surat">📍 Surat (1 Hostel)</a>
-                    <a href="hostel.html?city=bhavnagar">📍 Bhavnagar (1 Hostel)</a>
-                    <a href="hostel.html?city=vallabh">📍 Vallabh Vidyanagar (2 Hostels)</a>
+                    <a href="hostel.html?city=mumbai">📍 Mumbai</a>
+                    <a href="hostel.html?city=vadodara">📍 Vadodara</a>
+                    <a href="hostel.html?city=ahmedabad">📍 Ahmedabad</a>
+                    <a href="hostel.html?city=pune">📍 Pune</a>
+                    <a href="hostel.html?city=vallabh">📍 Vallabh Vidyanagar</a>
+                    <a href="hostel.html?city=bhavnagar">📍 Bhavnagar</a>
+                    <a href="hostel.html?city=surat">📍 Surat</a>
                 </div>
                 <div class="footer-col">
                     <h5>Resources</h5>
@@ -531,11 +936,9 @@
                 btn.classList.add('active');
                 const filterValue = btn.getAttribute('data-filter');
                 
-                let visibleCount = 0;
                 hostelCards.forEach(card => {
                     if (filterValue === 'all') {
                         card.style.display = 'block';
-                        visibleCount++;
                     } else {
                         const city = card.getAttribute('data-city');
                         const type = card.getAttribute('data-type');
@@ -543,28 +946,15 @@
                             (filterValue === 'girls' && type === 'girls') ||
                             city === filterValue) {
                             card.style.display = 'block';
-                            visibleCount++;
                         } else {
                             card.style.display = 'none';
                         }
                     }
                 });
-                
-                // Update button text with count
-                if (filterValue === 'all') btn.textContent = `All (13)`;
-                else if (filterValue === 'boys') btn.textContent = `👨 Boys Hostels (${document.querySelectorAll('.hostel-card[data-type="boys"]:not([style*="display: none"])').length})`;
-                else if (filterValue === 'girls') btn.textContent = `👩 Girls Hostels (${document.querySelectorAll('.hostel-card[data-type="girls"]:not([style*="display: none"])').length})`;
-                else if (filterValue === 'mumbai') btn.textContent = `📍 Mumbai (${document.querySelectorAll('.hostel-card[data-city="mumbai"]:not([style*="display: none"])').length})`;
-                else if (filterValue === 'vadodara') btn.textContent = `📍 Vadodara (${document.querySelectorAll('.hostel-card[data-city="vadodara"]:not([style*="display: none"])').length})`;
-                else if (filterValue === 'ahmedabad') btn.textContent = `📍 Ahmedabad (${document.querySelectorAll('.hostel-card[data-city="ahmedabad"]:not([style*="display: none"])').length})`;
-                else if (filterValue === 'pune') btn.textContent = `📍 Pune (${document.querySelectorAll('.hostel-card[data-city="pune"]:not([style*="display: none"])').length})`;
-                else if (filterValue === 'surat') btn.textContent = `📍 Surat (${document.querySelectorAll('.hostel-card[data-city="surat"]:not([style*="display: none"])').length})`;
-                else if (filterValue === 'bhavnagar') btn.textContent = `📍 Bhavnagar (${document.querySelectorAll('.hostel-card[data-city="bhavnagar"]:not([style*="display: none"])').length})`;
-                else if (filterValue === 'vallabh') btn.textContent = `📍 Vallabh Vidyanagar (${document.querySelectorAll('.hostel-card[data-city="vallabh"]:not([style*="display: none"])').length})`;
             });
         });
 
-        // ====== URL PARAMETER FILTER (for footer city clicks) ======
+        // ====== URL PARAMETER FILTER ======
         function getUrlParameter(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
@@ -581,44 +971,350 @@
             }, 300);
         }
 
-        // ====== HOSTEL DETAILS MODAL ======
+        // ====== HOSTEL DETAILS WITH ROOM INFORMATION ======
         const hostelDetails = {
-            sandhurst: { name: "Sandhurst Road Hostel", type: "Boys Hostel", capacity: "180 seats", contact: "022-2625 0382", location: "Near Sandhurst Road Station, Mumbai Central", rating: 4.9, features: ["Jinalaya", "Jain Meals", "Library", "Study Hall", "Wi-Fi", "24/7 Security"], fees: "₹8,500 - ₹12,000 per month", address: "Shri Mahavira Jaina Vidyalaya, Sandhurst Road, opp. Police Commissioner Office, Near Sandhurst Road Station, Mumbai – 400 007" },
-            andheri: { name: "Andheri (West) Hostel", type: "Boys Hostel", capacity: "120 seats", contact: "022-2625 0383", location: "Near Andheri Station, Mumbai West", rating: 4.8, features: ["Jinalaya", "Jain Meals", "Games Room", "Study Area", "Wi-Fi", "CCTV"], fees: "₹9,000 - ₹13,000 per month", address: "SMJV Andheri Hostel, Andheri (West), Mumbai – 400 058" },
-            mumbaiGirls: { name: "Mumbai Girls Hostel", type: "Girls Hostel", capacity: "100 seats", contact: "022-2625 0384", location: "Near Matunga, Mumbai", rating: 4.9, features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Library", "Study Room"], fees: "₹10,000 - ₹14,000 per month", address: "SMJV Girls Hostel, Matunga, Mumbai – 400 019" },
-            vadodaraBoys: { name: "Karelibaug Boys Hostel", type: "Boys Hostel", capacity: "150 seats", contact: "0265-242 1234", location: "Karelibaug, Vadodara", rating: 4.7, features: ["Derasar", "Jain Meals", "Sports Ground", "Study Hall", "Gym", "Wi-Fi"], fees: "₹6,500 - ₹9,500 per month", address: "SMJV Karelibaug Hostel, Karelibaug, Vadodara – 390 018" },
-            vadodaraGirls: { name: "Vadodara Girls Hostel", type: "Girls Hostel", capacity: "80 seats", contact: "0265-242 5678", location: "Near Polytechnic, Vadodara", rating: 4.8, features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Library", "Garden"], fees: "₹7,000 - ₹10,000 per month", address: "SMJV Girls Hostel, Near Polytechnic, Vadodara – 390 015" },
-            ahmedabadBoys: { name: "Shahibaug Boys Hostel", type: "Boys Hostel", capacity: "100 seats", contact: "079-2288 1234", location: "Shahibaug, Ahmedabad", rating: 4.6, features: ["Derasar", "Pure Jain Food", "Pathshala", "Study Room", "Wi-Fi"], fees: "₹5,500 - ₹8,500 per month", address: "SMJV Shahibaug Hostel, Shahibaug, Ahmedabad – 380 004" },
-            ahmedabadGirls: { name: "Naranpura Girls Hostel", type: "Girls Hostel", capacity: "70 seats", contact: "079-2288 5678", location: "Naranpura, Ahmedabad", rating: 4.8, features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Study Area"], fees: "₹6,000 - ₹9,000 per month", address: "SMJV Naranpura Hostel, Naranpura, Ahmedabad – 380 013" },
-            puneBoys: { name: "Pune Boys Hostel", type: "Boys Hostel", capacity: "90 seats", contact: "020-2550 1234", location: "Near Pune Station, Pune", rating: 4.7, features: ["Jinalaya", "Jain Meals", "Study Room", "Wi-Fi", "Library"], fees: "₹8,000 - ₹12,000 per month", address: "SMJV Pune Boys Hostel, Near Pune Station, Pune – 411 001" },
-            puneGirls: { name: "Pune Girls Hostel", type: "Girls Hostel", capacity: "60 seats", contact: "020-2550 5678", location: "Near FC Road, Pune", rating: 4.6, features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Library"], fees: "₹9,000 - ₹13,000 per month", address: "SMJV Pune Girls Hostel, Near FC Road, Pune – 411 004" },
-            suratGirls: { name: "Surat Girls Hostel", type: "Girls Hostel", capacity: "75 seats", contact: "0261-246 1234", location: "Near Varachha Road, Surat", rating: 4.6, features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Study Room"], fees: "₹5,500 - ₹8,500 per month", address: "SMJV Surat Girls Hostel, Near Varachha Road, Surat – 395 006" },
-            bhavnagarBoys: { name: "Bhavnagar Boys Hostel", type: "Boys Hostel", capacity: "80 seats", contact: "0278-251 1234", location: "Near Ghogha Circle, Bhavnagar", rating: 4.5, features: ["Deraser", "Jain Meals", "Garden", "Study Room", "Wi-Fi"], fees: "₹4,500 - ₹7,000 per month", address: "SMJV Bhavnagar Hostel, Near Ghogha Circle, Bhavnagar – 364 001" },
-            vallabhBoys: { name: "V.V. Nagar Boys Hostel", type: "Boys Hostel", capacity: "110 seats", contact: "02692-231 234", location: "Near Charutar Vidya Mandal, Anand", rating: 4.7, features: ["Deraser", "Jain Meals", "Library", "Study Hall", "Wi-Fi"], fees: "₹5,000 - ₹8,000 per month", address: "SMJV V.V. Nagar Hostel, Near Charutar Vidya Mandal, Anand – 388 120" },
-            vallabhGirls: { name: "V.V. Nagar Girls Hostel", type: "Girls Hostel", capacity: "65 seats", contact: "02692-231 235", location: "Near Charutar Vidya Mandal, Anand", rating: 4.8, features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Library"], fees: "₹5,500 - ₹8,500 per month", address: "SMJV V.V. Nagar Girls Hostel, Near Charutar Vidya Mandal, Anand – 388 120" }
+            sandhurst: { 
+                name: "Sandhurst Road Boys Hostel", 
+                type: "Boys Hostel", 
+                capacity: "180 seats", 
+                contact: "022-3521 4024", 
+                location: "Sandhurst Road, Mumbai Central", 
+                rating: 4.9, 
+                features: ["Jinalaya", "Jain Meals", "Library", "Study Hall", "Wi-Fi", "24/7 Security"],
+                fees: "₹88,000 - ₹95,000 per year", 
+                address: "Sandhurst Road, opp. Police Commissioner Office, Near Sandhurst Road Station, Mumbai – 400 007",
+                roomInfo: {
+                    roomTypes: "Double & Triple Sharing Rooms",
+                    sharing: "2-3 students per room",
+                    bed: "Cot with mattress + Pillow",
+                    attachedBathroom: "Yes (Attached for Double rooms), Common for Triple",
+                    studyTable: "Yes, per student",
+                    almirah: "Yes, per student",
+                    fanCooler: "Ceiling Fan + Cooler available",
+                    messTimings: "Breakfast: 7-8 AM | Lunch: 12:30-1:30 PM | Dinner: 7:30-8:30 PM",
+                    waterFacility: "RO Water Purifier + Water Cooler",
+                    laundry: "Paid Laundry Service Available",
+                    parking: "Bike Parking Available"
+                }
+            },
+            andheri: { 
+                name: "Andheri Boys Hostel", 
+                type: "Boys Hostel", 
+                capacity: "120 seats", 
+                contact: "022-2625 0383", 
+                location: "Andheri (West), Mumbai", 
+                rating: 4.8, 
+                features: ["Jinalaya", "Jain Meals", "Games Room", "Study Area", "Wi-Fi", "CCTV"],
+                fees: "₹88,000 - ₹95,000 per year", 
+                address: "SMJV Andheri Hostel, Andheri (West), Mumbai – 400 058",
+                roomInfo: {
+                    roomTypes: "Double & Triple Sharing",
+                    sharing: "2-3 students per room",
+                    bed: "Cot with mattress",
+                    attachedBathroom: "Yes",
+                    studyTable: "Yes",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan",
+                    messTimings: "Breakfast: 7-8 AM | Lunch: 12:30-1:30 PM | Dinner: 7:30-8:30 PM",
+                    waterFacility: "RO + Cooler",
+                    laundry: "Paid",
+                    parking: "Bike Parking"
+                }
+            },
+            vadodaraBoys: { 
+                name: "Karelibaug Boys Hostel", 
+                type: "Boys Hostel", 
+                capacity: "150 seats", 
+                contact: "0265-242 1234", 
+                location: "Karelibaug, Vadodara", 
+                rating: 4.7, 
+                features: ["Derasar", "Jain Meals", "Sports Ground", "Study Hall", "Gym", "Wi-Fi"],
+                fees: "₹70,000 per year", 
+                address: "SMJV Karelibaug Hostel, Karelibaug, Vadodara – 390 018",
+                roomInfo: {
+                    roomTypes: "Triple & Quad Sharing",
+                    sharing: "3-4 students per room",
+                    bed: "Bunk beds with mattress",
+                    attachedBathroom: "Common Bathroom",
+                    studyTable: "Common Study Hall",
+                    almirah: "Yes, per student",
+                    fanCooler: "Ceiling Fan",
+                    messTimings: "Breakfast: 7-8 AM | Lunch: 12:30-1:30 PM | Dinner: 7:30-8:30 PM",
+                    waterFacility: "RO Water",
+                    laundry: "Paid",
+                    parking: "Bike & Car Parking"
+                }
+            },
+            vadodaraGirls: { 
+                name: "Hiraba Kanya Chhatralaya", 
+                type: "Girls Hostel", 
+                capacity: "80 seats", 
+                contact: "0265-242 5678", 
+                location: "Vadodara", 
+                rating: 4.8, 
+                features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Library", "Garden"],
+                fees: "₹50,000 per year", 
+                address: "SMJV Girls Hostel, Vadodara – 390 015",
+                roomInfo: {
+                    roomTypes: "Double & Triple Sharing",
+                    sharing: "2-3 students per room",
+                    bed: "Cot with mattress",
+                    attachedBathroom: "Yes",
+                    studyTable: "Yes",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan",
+                    messTimings: "Breakfast: 7:30-8:30 AM | Lunch: 12:30-1:30 PM | Dinner: 7-8 PM",
+                    waterFacility: "RO + Cooler",
+                    laundry: "Paid",
+                    parking: "Bike Parking"
+                }
+            },
+            ahmedabadBoys: { 
+                name: "Shahibaug Boys Hostel", 
+                type: "Boys Hostel", 
+                capacity: "100 seats", 
+                contact: "079-2288 1234", 
+                location: "Shahibaug, Ahmedabad", 
+                rating: 4.6, 
+                features: ["Derasar", "Pure Jain Food", "Pathshala", "Study Room", "Wi-Fi"],
+                fees: "₹88,000 per year", 
+                address: "SMJV Shahibaug Hostel, Shahibaug, Ahmedabad – 380 004",
+                roomInfo: {
+                    roomTypes: "Double & Triple Sharing",
+                    sharing: "2-3 students per room",
+                    bed: "Cot with mattress",
+                    attachedBathroom: "Yes for Double, Common for Triple",
+                    studyTable: "Yes",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan + Cooler",
+                    messTimings: "Breakfast: 7-8 AM (Before Sunrise) | Lunch: 12-1 PM | Dinner: 6:30-7:30 PM (Before Sunset)",
+                    waterFacility: "RO Water",
+                    laundry: "Paid",
+                    parking: "Bike Parking"
+                }
+            },
+            ahmedabadGirls: { 
+                name: "Naranpura Girls Hostel", 
+                type: "Girls Hostel", 
+                capacity: "70 seats", 
+                contact: "079-2288 5678", 
+                location: "Naranpura, Ahmedabad", 
+                rating: 4.8, 
+                features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Study Area"],
+                fees: "₹50,000 per year", 
+                address: "SMJV Naranpura Hostel, Naranpura, Ahmedabad – 380 013",
+                roomInfo: {
+                    roomTypes: "Triple Sharing",
+                    sharing: "3 students per room",
+                    bed: "Bunk beds",
+                    attachedBathroom: "Common Bathroom",
+                    studyTable: "Common Study Area",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan",
+                    messTimings: "Breakfast: 7:30-8:30 AM | Lunch: 12:30-1:30 PM | Dinner: 7-8 PM",
+                    waterFacility: "RO + Cooler",
+                    laundry: "Paid",
+                    parking: "Bike Parking"
+                }
+            },
+            puneBoys: { 
+                name: "Agarkar Road / BMCC Boys Hostel", 
+                type: "Boys Hostel", 
+                capacity: "387 seats", 
+                contact: "020-2565 1226", 
+                location: "Agarkar Road, Near BMCC College, Pune", 
+                rating: 4.7, 
+                features: ["Jinalaya", "Jain Meals", "Study Room", "Wi-Fi", "Library"],
+                fees: "₹95,000 per year", 
+                address: "SMJV Agarkar Road Hostel, Near BMCC College, Pune – 411 004",
+                roomInfo: {
+                    roomTypes: "Double & Triple Sharing",
+                    sharing: "2-3 students per room",
+                    bed: "Cot with mattress",
+                    attachedBathroom: "Yes",
+                    studyTable: "Yes",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan",
+                    messTimings: "Breakfast: 7-8 AM | Lunch: 12:30-1:30 PM | Dinner: 7:30-8:30 PM",
+                    waterFacility: "RO + Cooler",
+                    laundry: "Paid",
+                    parking: "Bike Parking"
+                }
+            },
+            puneGirls: { 
+                name: "Pune Girls Hostel", 
+                type: "Girls Hostel", 
+                capacity: "60 seats", 
+                contact: "020-2550 5678", 
+                location: "Near FC Road, Pune", 
+                rating: 4.6, 
+                features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Library"],
+                fees: "₹50,000 per year", 
+                address: "SMJV Pune Girls Hostel, Near FC Road, Pune – 411 004",
+                roomInfo: {
+                    roomTypes: "Double Sharing",
+                    sharing: "2 students per room",
+                    bed: "Cot with mattress",
+                    attachedBathroom: "Yes",
+                    studyTable: "Yes",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan",
+                    messTimings: "Breakfast: 7:30-8:30 AM | Lunch: 12:30-1:30 PM | Dinner: 7-8 PM",
+                    waterFacility: "RO + Cooler",
+                    laundry: "Paid",
+                    parking: "Bike Parking"
+                }
+            },
+            vallabhBoys: { 
+                name: "Laherchand Uttamchand Vidyarthi Gruh", 
+                type: "Boys Hostel", 
+                capacity: "139 seats", 
+                contact: "02692-230211", 
+                location: "Near Nagar Palika, Nana Bazar, Vallabh Vidyanagar, Anand", 
+                rating: 4.7, 
+                features: ["Deraser", "Jain Meals", "Library", "AC Reading Room", "Wi-Fi"],
+                fees: "₹60,000 per year", 
+                address: "Near Nagar Palika, Nana Bazar, Vallabh Vidyanagar, Dist. Anand – 388 120",
+                roomInfo: {
+                    roomTypes: "Single & Double Sharing",
+                    sharing: "1-2 students per room",
+                    bed: "Cot with mattress",
+                    attachedBathroom: "Yes",
+                    studyTable: "Yes",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan + AC Reading Room",
+                    messTimings: "Breakfast: 7-8 AM | Lunch: 12:30-1:30 PM | Dinner: 7:30-8:30 PM",
+                    waterFacility: "RO Water",
+                    laundry: "Paid",
+                    parking: "Bike & Car Parking"
+                }
+            },
+            vallabhGirls: { 
+                name: "Naliniben Changani Kanya Chhatralaya", 
+                type: "Girls Hostel", 
+                capacity: "95 seats", 
+                contact: "02692-232455", 
+                location: "Vallabh Vidyanagar, Anand", 
+                rating: 4.8, 
+                features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Library"],
+                fees: "₹50,000 per year", 
+                address: "Vallabh Vidyanagar, Dist. Anand – 388 120",
+                roomInfo: {
+                    roomTypes: "Double & Triple Sharing",
+                    sharing: "2-3 students per room",
+                    bed: "Cot with mattress",
+                    attachedBathroom: "Yes for Double, Common for Triple",
+                    studyTable: "Yes",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan",
+                    messTimings: "Breakfast: 7:30-8:30 AM | Lunch: 12:30-1:30 PM | Dinner: 7-8 PM",
+                    waterFacility: "RO + Cooler",
+                    laundry: "Paid",
+                    parking: "Bike Parking"
+                }
+            },
+            bhavnagarBoys: { 
+                name: "Manilal Durlabhji Boys Hostel", 
+                type: "Boys Hostel", 
+                capacity: "75 seats", 
+                contact: "0278-256 3969", 
+                location: "Near Ghogha Circle, Bhavnagar", 
+                rating: 4.5, 
+                features: ["Deraser", "Jain Meals", "Garden", "Study Room", "Wi-Fi"],
+                fees: "₹45,000 per year", 
+                address: "Manilal Durlabhji Hostel, Near Ghogha Circle, Bhavnagar – 364 001",
+                roomInfo: {
+                    roomTypes: "Triple Sharing",
+                    sharing: "3 students per room",
+                    bed: "Bunk beds",
+                    attachedBathroom: "Common Bathroom",
+                    studyTable: "Common Study Room",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan",
+                    messTimings: "Breakfast: 7-8 AM | Lunch: 12:30-1:30 PM | Dinner: 7:30-8:30 PM",
+                    waterFacility: "RO + Cooler",
+                    laundry: "Paid",
+                    parking: "Bike Parking"
+                }
+            },
+            suratGirls: { 
+                name: "Surat Girls Hostel", 
+                type: "Girls Hostel", 
+                capacity: "75 seats", 
+                contact: "0261-246 1234", 
+                location: "Near Varachha Road, Surat", 
+                rating: 4.6, 
+                features: ["Jinalaya", "Jain Meals", "Female Warden", "CCTV", "Study Room"],
+                fees: "₹50,000 per year", 
+                address: "SMJV Surat Girls Hostel, Near Varachha Road, Surat – 395 006",
+                roomInfo: {
+                    roomTypes: "Double & Triple Sharing",
+                    sharing: "2-3 students per room",
+                    bed: "Cot with mattress",
+                    attachedBathroom: "Yes",
+                    studyTable: "Yes",
+                    almirah: "Yes",
+                    fanCooler: "Ceiling Fan",
+                    messTimings: "Breakfast: 7:30-8:30 AM | Lunch: 12:30-1:30 PM | Dinner: 7-8 PM",
+                    waterFacility: "RO + Cooler",
+                    laundry: "Paid",
+                    parking: "Bike Parking"
+                }
+            }
         };
 
         function openDetailsModal(key) {
             const h = hostelDetails[key];
             if (!h) { alert("Details coming soon!"); return; }
             const stars = "★".repeat(Math.floor(h.rating)) + "☆".repeat(5 - Math.floor(h.rating));
+            
+            // Generate room details HTML
+            const roomHtml = h.roomInfo ? `
+                <div class="section-title-sm">🛏️ Room & Facilities</div>
+                <table class="room-details-table">
+                    <tr><td>📌 Room Type</td><td>${h.roomInfo.roomTypes}</td></tr>
+                    <tr><td>👥 Sharing</td><td>${h.roomInfo.sharing}</td></tr>
+                    <tr><td>🛌 Bed</td><td>${h.roomInfo.bed}</td></tr>
+                    <tr><td>🚽 Attached Bathroom</td><td>${h.roomInfo.attachedBathroom}</td></tr>
+                    <tr><td>📖 Study Table</td><td>${h.roomInfo.studyTable}</td></tr>
+                    <tr><td>🗄️ Almirah</td><td>${h.roomInfo.almirah}</td></tr>
+                    <tr><td>💨 Fan/Cooler/AC</td><td>${h.roomInfo.fanCooler}</td></tr>
+                </table>
+                <div class="section-title-sm">🍽️ Mess & Facilities</div>
+                <table class="room-details-table">
+                    <tr><td>⏰ Mess Timings</td><td>${h.roomInfo.messTimings}</td></tr>
+                    <tr><td>💧 Water Facility</td><td>${h.roomInfo.waterFacility}</td></tr>
+                    <tr><td>🧺 Laundry</td><td>${h.roomInfo.laundry}</td></tr>
+                    <tr><td>🅿️ Parking</td><td>${h.roomInfo.parking}</td></tr>
+                </table>
+            ` : '';
+            
             const modal = document.createElement('div');
             modal.id = "detailsModal";
             modal.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:10001;display:flex;align-items:center;justify-content:center;";
-            modal.innerHTML = `<div style="background:#fff;max-width:550px;width:90%;max-height:85vh;overflow-y:auto;border-radius:28px;padding:28px;position:relative;">
+            modal.innerHTML = `<div style="background:#fff;max-width:600px;width:90%;max-height:85vh;overflow-y:auto;border-radius:28px;padding:28px;position:relative;">
                 <button onclick="this.closest('#detailsModal').remove()" style="position:absolute;top:12px;right:18px;background:none;border:none;font-size:26px;cursor:pointer;">&times;</button>
                 <h2 style="font-family:'Cormorant Garamond',serif;color:#1F1006;">${h.name}</h2>
                 <div style="color:#E8723A;margin:5px 0 12px;">${stars} (${h.rating})</div>
                 <div style="background:#F5ECD7;padding:10px;border-radius:12px;margin-bottom:15px;"><span style="background:#E8723A;color:#fff;padding:4px 12px;border-radius:50px;">${h.type}</span></div>
-                <table style="width:100%;margin-bottom:15px;">${h.location ? `<tr><td style="padding:6px 0;color:#5C3D2A;"><strong>📍 Location</strong></td><td>${h.location}</td></tr>` : ''}<tr><td style="padding:6px 0;color:#5C3D2A;"><strong>👥 Capacity</strong></td><td>${h.capacity}</td></tr><tr><td style="padding:6px 0;color:#5C3D2A;"><strong>📞 Contact</strong></td><td><a href="tel:${h.contact}" style="color:#E8723A;">${h.contact}</a></td></tr><tr><td style="padding:6px 0;color:#5C3D2A;"><strong>💰 Fees</strong></td><td>${h.fees}</td></tr></table>
+                <table style="width:100%;margin-bottom:15px;">
+                    <tr><td style="padding:6px 0;color:#5C3D2A;"><strong>📍 Location</strong></td><td style="padding:6px 0;">${h.location}</td></tr>
+                    <tr><td style="padding:6px 0;color:#5C3D2A;"><strong>👥 Capacity</strong></td><td style="padding:6px 0;">${h.capacity}</td></tr>
+                    <tr><td style="padding:6px 0;color:#5C3D2A;"><strong>📞 Contact</strong></td><td style="padding:6px 0;"><a href="tel:${h.contact}" style="color:#E8723A;">${h.contact}</a></td></tr>
+                    <tr><td style="padding:6px 0;color:#5C3D2A;"><strong>💰 Annual Fees</strong></td><td style="padding:6px 0;">${h.fees}</td></tr>
+                </table>
                 <div style="margin-bottom:15px;"><strong>🏠 Features:</strong><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">${h.features.map(f => `<span style="background:#F5ECD7;padding:4px 10px;border-radius:50px;font-size:0.7rem;">${f}</span>`).join('')}</div></div>
+                ${roomHtml}
                 <p style="font-size:0.8rem;color:#5C3D2A;margin-bottom:15px;">${h.address}</p>
-                <div style="display:flex;gap:12px;"><button onclick="window.location.href='form.html'" style="flex:1;background:#E8723A;color:#fff;padding:12px;border:none;border-radius:50px;font-weight:600;cursor:pointer;">Apply Now →</button><button onclick="window.location.href='contact.html'" style="flex:1;background:transparent;color:#E8723A;padding:12px;border:2px solid #E8723A;border-radius:50px;font-weight:600;cursor:pointer;">Contact Us</button></div>
+                <div style="display:flex;gap:12px;">
+                    <button onclick="window.location.href='form.html'" style="flex:1;background:#E8723A;color:#fff;padding:12px;border:none;border-radius:50px;font-weight:600;cursor:pointer;">Apply Now →</button>
+                    <button onclick="window.location.href='contact.html'" style="flex:1;background:transparent;color:#E8723A;padding:12px;border:2px solid #E8723A;border-radius:50px;font-weight:600;cursor:pointer;">Contact Us</button>
+                </div>
             </div>`;
             document.body.appendChild(modal);
         }
 
-        // Apply button handler: redirect to application form
+        // Apply button handler - Directly redirect to form.html
         document.querySelectorAll('.apply-btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
